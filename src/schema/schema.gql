@@ -49,4 +49,5 @@ type Query {
 type Mutation {
   login(password: String!, username: String!): OauthTOken!
   createTagSolution(tag: String!, solution_id: String!): Solution!
+  createTeamMemberSolution(team_member: String!, solution_id: String!): Solution!
 }

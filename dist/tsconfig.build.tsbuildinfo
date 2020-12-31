@@ -4585,8 +4585,8 @@
         "signature": "7979bb03f4b59cd28f81a7a7f53276969fbe6d1a9b09a085d914dd339deaeee9"
       },
       "../src/solutions/resolvers/solution.resolver.ts": {
-        "version": "a2e1540beb33bde019d68bb75a534f3666dfabf444fed449bc127a1aab8810e1",
-        "signature": "fe95675ceddf2b23a54ceea5cebe230dcd45a40a62f79de793365896af8858b5"
+        "version": "ed760d4a2994f3e7f8eb6f76342dbfc37496ca1707286d803b18f09d69200642",
+        "signature": "67615a236524ddb3810374114db5f5742448ea6b92195f7ea420faa6291b421e"
       },
       "../src/solutions/solutions.module.ts": {
         "version": "17fe5424a33405ab935d5e07600f49c80710a59fd6f1f78f2d27d1e1844cf790",
@@ -28630,9 +28630,8 @@
       "../node_modules/@nestjs/mapped-types/index.d.ts",
       "../src/solutions/dto/update-solution.dto.ts",
       "../src/solutions/entities/solution.entity.ts",
+      "../src/solutions/solutions.service.ts",
       "../src/solutions/solutions.controller.ts",
-      "../src/solutions/resolvers/solution.resolver.ts",
-      "../src/solutions/solutions.module.ts",
       "../src/app.module.ts",
       "../src/cluster.service.ts",
       "../src/main.ts",
@@ -28682,7 +28681,8 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/solutions/solutions.service.ts"
+      "../src/solutions/resolvers/solution.resolver.ts",
+      "../src/solutions/solutions.module.ts"
     ]
   },
   "version": "3.8.3"

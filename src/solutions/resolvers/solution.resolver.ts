@@ -37,4 +37,15 @@ export class SolutionResolver {
     
     return result;
   }
+  
+  @Mutation(returns => Solution)
+  public async createTeamMemberSolution(
+    @Args({ name: 'solution_id' }) solution_id: string,
+    @Args({ name: 'team_member' }) team_member: string,
+  ) {
+
+    const result: Solution = await this.solutionService.createTeamMember(solution_id, team_member);
+    
+    return result;
+  }
 }

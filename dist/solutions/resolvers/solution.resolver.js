@@ -34,6 +34,10 @@ let SolutionResolver = class SolutionResolver {
         const result = await this.solutionService.createTag(solution_id, tag);
         return result;
     }
+    async createTeamMemberSolution(solution_id, team_member) {
+        const result = await this.solutionService.createTeamMember(solution_id, team_member);
+        return result;
+    }
 };
 __decorate([
     graphql_1.Query(returns => [solution_entity_1.Solution]),
@@ -57,6 +61,14 @@ __decorate([
     __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", Promise)
 ], SolutionResolver.prototype, "createTagSolution", null);
+__decorate([
+    graphql_1.Mutation(returns => solution_entity_1.Solution),
+    __param(0, graphql_1.Args({ name: 'solution_id' })),
+    __param(1, graphql_1.Args({ name: 'team_member' })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:returntype", Promise)
+], SolutionResolver.prototype, "createTeamMemberSolution", null);
 SolutionResolver = __decorate([
     graphql_1.Resolver('Solutions'),
     __metadata("design:paramtypes", [solutions_service_1.SolutionsService])
