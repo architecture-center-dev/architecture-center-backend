@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { getRepository, Repository } from 'typeorm';
 import { CreateSolutionDto } from './dto/create-solution.dto';
 import { UpdateSolutionDto } from './dto/update-solution.dto';
 import { Solution } from './entities/solution.entity';
+import {ObjectID} from 'mongodb'
 
 @Injectable()
 export class SolutionsService {
@@ -32,8 +33,8 @@ export class SolutionsService {
     return this.userRepository.find(query);
   }
 
-  findOne(id: number) {
-    return this.userRepository.findOne(id);
+  findOne(where : object) {
+    return this.userRepository.findOne(where);
   }
 
   update(id: number, updateSolutionDto: UpdateSolutionDto) {
@@ -42,5 +43,19 @@ export class SolutionsService {
 
   remove(id: number) {
     return `This action removes a #${id} solution`;
+  }
+  
+  async createTag(solution_id: string, tag: string) {
+    
+      const solutionRepository = getRepository(Solution); // you can also get it via getConnection().getRepository() or getManager().getRepository()
+      const solution = await solutionRepository.findOne(new ObjectID(solution_id));
+      
+      if(!solution.tags.includes(tag)){
+        (solution.tags as any).push(tag);
+      }
+
+      const result =  await solutionRepository.save(solution);
+
+      return result;
   }
 }

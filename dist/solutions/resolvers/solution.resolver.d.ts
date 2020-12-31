@@ -4,4 +4,6 @@ export declare class SolutionResolver {
     private solutionService;
     constructor(solutionService: SolutionsService);
     solution(search: string): Promise<Solution[]>;
+    solutionById(solution_id: string): Promise<Solution>;
+    createTagSolution(solution_id: string, tag: string): Promise<Solution>;
 }

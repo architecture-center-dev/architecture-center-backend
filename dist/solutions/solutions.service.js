@@ -16,6 +16,7 @@ const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
 const solution_entity_1 = require("./entities/solution.entity");
+const mongodb_1 = require("mongodb");
 let SolutionsService = class SolutionsService {
     constructor(userRepository) {
         this.userRepository = userRepository;
@@ -35,14 +36,23 @@ let SolutionsService = class SolutionsService {
             } : {};
         return this.userRepository.find(query);
     }
-    findOne(id) {
-        return this.userRepository.findOne(id);
+    findOne(where) {
+        return this.userRepository.findOne(where);
     }
     update(id, updateSolutionDto) {
         return `This action updates a #${id} solution`;
     }
     remove(id) {
         return `This action removes a #${id} solution`;
+    }
+    async createTag(solution_id, tag) {
+        const solutionRepository = typeorm_2.getRepository(solution_entity_1.Solution);
+        const solution = await solutionRepository.findOne(new mongodb_1.ObjectID(solution_id));
+        if (!solution.tags.includes(tag)) {
+            solution.tags.push(tag);
+        }
+        const result = await solutionRepository.save(solution);
+        return result;
     }
 };
 SolutionsService = __decorate([

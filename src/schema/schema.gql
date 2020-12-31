@@ -42,8 +42,10 @@ scalar DateTime
 type Query {
   users: [User!]!
   solution(search: String): [Solution!]!
+  solutionById(solution_id: String!): Solution
 }
 
 type Mutation {
   login(password: String!, username: String!): OauthTOken!
+  createTagSolution(tag: String!, solution_id: String!): Solution!
 }

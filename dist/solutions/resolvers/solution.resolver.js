@@ -14,9 +14,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const graphql_1 = require("@nestjs/graphql");
 const gql_auth_guard_1 = require("../../auth/guards/gql.auth.guard");
-const current_user_decorator_1 = require("../../auth/decorators/current-user.decorator");
 const solutions_service_1 = require("../solutions.service");
 const solution_entity_1 = require("../entities/solution.entity");
+const mongodb_1 = require("mongodb");
 let SolutionResolver = class SolutionResolver {
     constructor(solutionService) {
         this.solutionService = solutionService;
@@ -24,6 +24,15 @@ let SolutionResolver = class SolutionResolver {
     async solution(search) {
         const solutions = await this.solutionService.findAll(search);
         return solutions;
+    }
+    async solutionById(solution_id) {
+        const solution = await this.solutionService.findOne({ where: { _id: new mongodb_1.ObjectId(solution_id) } });
+        console.log(solution);
+        return solution;
+    }
+    async createTagSolution(solution_id, tag) {
+        const result = await this.solutionService.createTag(solution_id, tag);
+        return result;
     }
 };
 __decorate([
@@ -33,6 +42,21 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], SolutionResolver.prototype, "solution", null);
+__decorate([
+    graphql_1.Query(returns => solution_entity_1.Solution, { nullable: true }),
+    __param(0, graphql_1.Args({ name: 'solution_id' })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String]),
+    __metadata("design:returntype", Promise)
+], SolutionResolver.prototype, "solutionById", null);
+__decorate([
+    graphql_1.Mutation(returns => solution_entity_1.Solution),
+    __param(0, graphql_1.Args({ name: 'solution_id' })),
+    __param(1, graphql_1.Args({ name: 'tag' })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, String]),
+    __metadata("design:returntype", Promise)
+], SolutionResolver.prototype, "createTagSolution", null);
 SolutionResolver = __decorate([
     graphql_1.Resolver('Solutions'),
     __metadata("design:paramtypes", [solutions_service_1.SolutionsService])

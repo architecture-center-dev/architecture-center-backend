@@ -4577,16 +4577,16 @@
         "signature": "cde83bbbe4d819154cbf2b8b4ca2e4268a84e2e38072f6a4f04f04a955fe59c3"
       },
       "../src/solutions/solutions.service.ts": {
-        "version": "95b6237b2fd2a364d6314b621bd90892fc38a62a51037fd6e59581ec1819885b",
-        "signature": "e3d15adbf40411790273c391b6d5c04aa19de1e3eb54d30fbc55c91afd80ebbc"
+        "version": "ffbd0283a063a473c6bd733a87c3c2b1e6b260e0aacf8660cb86252e3f110412",
+        "signature": "2bf24901f84da8fefd2b32b21fb64110d0b728b636224348e7403e19f833df70"
       },
       "../src/solutions/solutions.controller.ts": {
-        "version": "9207b51144323152bdd2849d3a3d6a1d483b1fccf9f6f0abeeed9253bfcd597e",
+        "version": "7d2c128bee8729e982d895db110eae9e593fcc70395efa2355bb3278292e381e",
         "signature": "819dfaa6c894e486469641cafa4211019d58712209302e192680c4f0b426d830"
       },
       "../src/solutions/resolvers/solution.resolver.ts": {
-        "version": "061e84ef9d0265db0ab8553566739d017aa39644513faa59f06e5b7be6243969",
-        "signature": "5a26e1924e43438c13954791943ec596dbb98f979890c954cbe6aa5fa44718dc"
+        "version": "a2e1540beb33bde019d68bb75a534f3666dfabf444fed449bc127a1aab8810e1",
+        "signature": "fe95675ceddf2b23a54ceea5cebe230dcd45a40a62f79de793365896af8858b5"
       },
       "../src/solutions/solutions.module.ts": {
         "version": "17fe5424a33405ab935d5e07600f49c80710a59fd6f1f78f2d27d1e1844cf790",
@@ -15839,7 +15839,6 @@
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/auth/guards/gql.auth.guard.ts",
-        "../src/auth/decorators/current-user.decorator.ts",
         "../src/solutions/solutions.service.ts",
         "../src/solutions/entities/solution.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -28631,8 +28630,8 @@
       "../node_modules/@nestjs/mapped-types/index.d.ts",
       "../src/solutions/dto/update-solution.dto.ts",
       "../src/solutions/entities/solution.entity.ts",
+      "../src/solutions/solutions.service.ts",
       "../src/solutions/solutions.controller.ts",
-      "../src/solutions/resolvers/solution.resolver.ts",
       "../src/solutions/solutions.module.ts",
       "../src/app.module.ts",
       "../src/cluster.service.ts",
@@ -28683,7 +28682,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/solutions/solutions.service.ts"
+      "../src/solutions/resolvers/solution.resolver.ts"
     ]
   },
   "version": "3.8.3"

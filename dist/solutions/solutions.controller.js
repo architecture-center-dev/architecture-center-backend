@@ -28,7 +28,7 @@ let SolutionsController = class SolutionsController {
         return this.solutionsService.findAll(query.search);
     }
     findOne(id) {
-        return this.solutionsService.findOne(+id);
+        return this.solutionsService.findOne({ where: { _id: id } });
     }
     update(id, updateSolutionDto) {
         return this.solutionsService.update(+id, updateSolutionDto);

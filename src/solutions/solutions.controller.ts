@@ -24,7 +24,7 @@ export class SolutionsController {
   @UseGuards(JwtAuthGuard)
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.solutionsService.findOne(+id);
+    return this.solutionsService.findOne({where:{_id: id}});
   }
 
   @Put(':id')

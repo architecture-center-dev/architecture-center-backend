@@ -7,7 +7,8 @@ export declare class SolutionsService {
     constructor(userRepository: Repository<Solution>);
     create(createSolutionDto: CreateSolutionDto): Promise<CreateSolutionDto & Solution>;
     findAll(filter: String): Promise<Solution[]>;
-    findOne(id: number): Promise<Solution>;
+    findOne(where: object): Promise<Solution>;
     update(id: number, updateSolutionDto: UpdateSolutionDto): string;
     remove(id: number): string;
+    createTag(solution_id: string, tag: string): Promise<Solution>;
 }
