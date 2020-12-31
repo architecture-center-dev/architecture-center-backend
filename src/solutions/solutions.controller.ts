@@ -20,6 +20,13 @@ export class SolutionsController {
 
     return this.solutionsService.createTag(solution_id,updateSolutionDto.tags as string);
   }
+  
+  //@UseGuards(JwtAuthGuard)
+  @Post('/:solution_id/team-members')
+  createTeamMember(@Param('solution_id') solution_id: string, @Body() request: Object) {
+
+    return this.solutionsService.createTeamMember(solution_id, (request as any).team_member);
+  }
 
   //@UseGuards(JwtAuthGuard)
   @Get()

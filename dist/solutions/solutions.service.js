@@ -54,6 +54,18 @@ let SolutionsService = class SolutionsService {
         const result = await solutionRepository.save(solution);
         return result;
     }
+    async createTeamMember(solution_id, team_member) {
+        const solutionRepository = typeorm_2.getRepository(solution_entity_1.Solution);
+        const solution = await solutionRepository.findOne(new mongodb_1.ObjectID(solution_id));
+        if (solution.team_members == undefined) {
+            solution.team_members = [team_member];
+        }
+        else if (!solution.team_members.includes(team_member)) {
+            solution.team_members.push(team_member);
+        }
+        const result = await solutionRepository.save(solution);
+        return result;
+    }
 };
 SolutionsService = __decorate([
     common_1.Injectable(),

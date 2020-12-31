@@ -27,6 +27,9 @@ let SolutionsController = class SolutionsController {
     createTags(solution_id, updateSolutionDto) {
         return this.solutionsService.createTag(solution_id, updateSolutionDto.tags);
     }
+    createTeamMember(solution_id, request) {
+        return this.solutionsService.createTeamMember(solution_id, request.team_member);
+    }
     findAll(query) {
         return this.solutionsService.findAll(query.search);
     }
@@ -54,6 +57,13 @@ __decorate([
     __metadata("design:paramtypes", [String, update_solution_dto_1.UpdateSolutionDto]),
     __metadata("design:returntype", void 0)
 ], SolutionsController.prototype, "createTags", null);
+__decorate([
+    common_1.Post('/:solution_id/team-members'),
+    __param(0, common_1.Param('solution_id')), __param(1, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, Object]),
+    __metadata("design:returntype", void 0)
+], SolutionsController.prototype, "createTeamMember", null);
 __decorate([
     common_1.Get(),
     __param(0, common_1.Query()),

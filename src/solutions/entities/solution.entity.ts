@@ -37,6 +37,10 @@ export class Solution {
     @Column({ array: true, nullable:true})
     tags: String;
     
+    @Field(type => [String],{nullable:true})
+    @Column({ array: true, nullable:true})
+    team_members: String;
+    
     @Field(type => Date)
     @CreateDateColumn()
     created_at: Date;

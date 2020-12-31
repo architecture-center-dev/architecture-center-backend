@@ -6,4 +6,5 @@ export declare class CreateSolutionDto {
     year_month: String;
     description: String;
     tags: String;
+    team_members: String;
 }

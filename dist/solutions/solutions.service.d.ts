@@ -11,4 +11,5 @@ export declare class SolutionsService {
     update(id: number, updateSolutionDto: UpdateSolutionDto): string;
     remove(id: number): string;
     createTag(solution_id: string, tag: string): Promise<Solution>;
+    createTeamMember(solution_id: string, team_member: string): Promise<Solution>;
 }

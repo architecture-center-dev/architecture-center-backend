@@ -58,4 +58,20 @@ export class SolutionsService {
 
       return result;
   }
+  
+  async createTeamMember(solution_id: string, team_member: string) {
+      
+      const solutionRepository = getRepository(Solution); // you can also get it via getConnection().getRepository() or getManager().getRepository()
+      const solution = await solutionRepository.findOne(new ObjectID(solution_id));
+      
+      if(solution.team_members == undefined){
+        (solution.team_members as any) = [team_member];
+      }else if(!solution.team_members.includes(team_member)){
+        (solution.team_members as any).push(team_member);
+      }
+
+      const result =  await solutionRepository.save(solution);
+
+      return result;
+  }
 }

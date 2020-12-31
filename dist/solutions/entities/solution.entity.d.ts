@@ -8,6 +8,7 @@ export declare class Solution {
     year_month: String;
     description: String;
     tags: String;
+    team_members: String;
     created_at: Date;
     updated_at: Date;
 }

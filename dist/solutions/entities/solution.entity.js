@@ -54,6 +54,11 @@ __decorate([
     __metadata("design:type", String)
 ], Solution.prototype, "tags", void 0);
 __decorate([
+    graphql_1.Field(type => [String], { nullable: true }),
+    typeorm_1.Column({ array: true, nullable: true }),
+    __metadata("design:type", String)
+], Solution.prototype, "team_members", void 0);
+__decorate([
     graphql_1.Field(type => Date),
     typeorm_1.CreateDateColumn(),
     __metadata("design:type", Date)
