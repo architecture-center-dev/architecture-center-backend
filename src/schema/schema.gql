@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Image {
+  originalname: String!
+  newFilename: String!
+}
+
+type User {
+  id: String!
+  name: String
+  lastname: String
+  email: String!
+  firstAccess: Boolean!
+  password: String!
+  image: Image!
+}
+
+type OauthTOken {
+  accessToken: String!
+}
+
+type Solution {
+  solution_id: String!
+  name: String
+  tags: [String!]!
+}
+
+type Query {
+  users: [User!]!
+  solution(search: String): [Solution!]!
+}
+
+type Mutation {
+  login(password: String!, username: String!): OauthTOken!
+}
