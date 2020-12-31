@@ -13,6 +13,13 @@ export class SolutionsController {
   create(@Body() createSolutionDto: CreateSolutionDto) {
     return this.solutionsService.create(createSolutionDto);
   }
+  
+  //@UseGuards(JwtAuthGuard)
+  @Post('/:solution_id/tags')
+  createTags(@Param('solution_id') solution_id: string, @Body() updateSolutionDto: UpdateSolutionDto) {
+
+    return this.solutionsService.createTag(solution_id,updateSolutionDto.tags as string);
+  }
 
   //@UseGuards(JwtAuthGuard)
   @Get()

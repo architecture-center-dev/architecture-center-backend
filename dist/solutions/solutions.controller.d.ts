@@ -5,6 +5,7 @@ export declare class SolutionsController {
     private readonly solutionsService;
     constructor(solutionsService: SolutionsService);
     create(createSolutionDto: CreateSolutionDto): Promise<CreateSolutionDto & import("./entities/solution.entity").Solution>;
+    createTags(solution_id: string, updateSolutionDto: UpdateSolutionDto): Promise<import("./entities/solution.entity").Solution>;
     findAll(query: Object): Promise<import("./entities/solution.entity").Solution[]>;
     findOne(id: string): Promise<import("./entities/solution.entity").Solution>;
     update(id: string, updateSolutionDto: UpdateSolutionDto): string;

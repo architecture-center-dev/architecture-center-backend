@@ -4581,8 +4581,8 @@
         "signature": "2bf24901f84da8fefd2b32b21fb64110d0b728b636224348e7403e19f833df70"
       },
       "../src/solutions/solutions.controller.ts": {
-        "version": "7d2c128bee8729e982d895db110eae9e593fcc70395efa2355bb3278292e381e",
-        "signature": "819dfaa6c894e486469641cafa4211019d58712209302e192680c4f0b426d830"
+        "version": "ebf355c7031f9ca9a5d1484ec44a256a28b55e0e67a2b46fd0825b0bf65e933d",
+        "signature": "0180ac1376488c866eedc2f4f3dfb57a0c0ce090849da620293d14f3c5b4d22c"
       },
       "../src/solutions/resolvers/solution.resolver.ts": {
         "version": "a2e1540beb33bde019d68bb75a534f3666dfabf444fed449bc127a1aab8810e1",
@@ -28631,8 +28631,7 @@
       "../src/solutions/dto/update-solution.dto.ts",
       "../src/solutions/entities/solution.entity.ts",
       "../src/solutions/solutions.service.ts",
-      "../src/solutions/solutions.controller.ts",
-      "../src/solutions/solutions.module.ts",
+      "../src/solutions/resolvers/solution.resolver.ts",
       "../src/app.module.ts",
       "../src/cluster.service.ts",
       "../src/main.ts",
@@ -28682,7 +28681,8 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/solutions/resolvers/solution.resolver.ts"
+      "../src/solutions/solutions.controller.ts",
+      "../src/solutions/solutions.module.ts"
     ]
   },
   "version": "3.8.3"
