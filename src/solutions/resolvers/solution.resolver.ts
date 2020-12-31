@@ -9,10 +9,10 @@ import { Solution } from '../entities/solution.entity';
 export class SolutionResolver {
   constructor(private solutionService: SolutionsService) { }
 
-  @UseGuards(GqlAuthGuard)
+  //@UseGuards(GqlAuthGuard)
   @Query(returns => [Solution])
   public async solution(@Args({ name: 'search',nullable: true }) search: string) {
-    console.log(search);
+    
     const solutions: Array<Solution> = await this.solutionService.findAll(search);
 
     return solutions;

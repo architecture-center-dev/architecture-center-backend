@@ -4537,8 +4537,8 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
       "../src/solutions/dto/create-solution.dto.ts": {
-        "version": "b4203ef50a5b48e551d020a10d6d02c4d3f7c744a57cdf83b3547cbe2eeb096a",
-        "signature": "0bc5f3239fb1a0b177e85f42470f70a1471c3c4a293bbb7d3623585db1433786"
+        "version": "50fb6cac4e3a11034b5338653d78eff64d7b1e82a6e8f3fb9774213c0c1319e6",
+        "signature": "6df1872407a801997962e4ec1de7a37f1b49ac6cebf21e3811f4bfc484e93c6a"
       },
       "../node_modules/@nestjs/mapped-types/dist/intersection-type.helper.d.ts": {
         "version": "2dd9d764938d20a0613b89b14d7da644f7be4a70d22f18c3019254029d7a7a3c",
@@ -4573,19 +4573,19 @@
         "signature": "7f8d497acf02d439c90a4dd2162dbfff9391905c0c8f81f144bded3b257e0e6b"
       },
       "../src/solutions/entities/solution.entity.ts": {
-        "version": "790bedcd957daab93f62d47e638bcf765cd0ad94d70304e686ebb7a235562585",
-        "signature": "6808f891177df821ca5a19b343d32477b275e83cbe7bc6c133588b5ab959b359"
+        "version": "0c5567dcdf605bbbbebbff5efa70a8249e2c8c184ad0e72f5a76863f78560684",
+        "signature": "cde83bbbe4d819154cbf2b8b4ca2e4268a84e2e38072f6a4f04f04a955fe59c3"
       },
       "../src/solutions/solutions.service.ts": {
-        "version": "666eaca406dd2034c7d89796c02b33493f2e95a2a6935765ad86c0a39ea91b11",
+        "version": "95b6237b2fd2a364d6314b621bd90892fc38a62a51037fd6e59581ec1819885b",
         "signature": "e3d15adbf40411790273c391b6d5c04aa19de1e3eb54d30fbc55c91afd80ebbc"
       },
       "../src/solutions/solutions.controller.ts": {
-        "version": "9c2d1b62312ea06677f712e8b212db072feeb797c2d09f5098ec628ad0dd3c62",
+        "version": "9207b51144323152bdd2849d3a3d6a1d483b1fccf9f6f0abeeed9253bfcd597e",
         "signature": "819dfaa6c894e486469641cafa4211019d58712209302e192680c4f0b426d830"
       },
       "../src/solutions/resolvers/solution.resolver.ts": {
-        "version": "a44d5c23410278cb857aa3a458a3e05e90ea9230d8561f22f43c82c25dde9f0e",
+        "version": "061e84ef9d0265db0ab8553566739d017aa39644513faa59f06e5b7be6243969",
         "signature": "5a26e1924e43438c13954791943ec596dbb98f979890c954cbe6aa5fa44718dc"
       },
       "../src/solutions/solutions.module.ts": {
@@ -4601,7 +4601,7 @@
         "signature": "eeee1d102284187049bcd6b1416cb5e6d852d455e74942c8fbd473664e7751dc"
       },
       "../src/main.ts": {
-        "version": "99aa9497cb94d7656e4177563254fcc9b3d15ae0cbbfc0ba6a8180b82c2a85ad",
+        "version": "1b1dfdfe1085237b0667a5a8254dc1e0aa5d568e724fb4466009b6a85168e302",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -28630,7 +28630,7 @@
       "../node_modules/@nestjs/mapped-types/dist/index.d.ts",
       "../node_modules/@nestjs/mapped-types/index.d.ts",
       "../src/solutions/dto/update-solution.dto.ts",
-      "../src/solutions/solutions.service.ts",
+      "../src/solutions/entities/solution.entity.ts",
       "../src/solutions/solutions.controller.ts",
       "../src/solutions/resolvers/solution.resolver.ts",
       "../src/solutions/solutions.module.ts",
@@ -28683,7 +28683,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/solutions/entities/solution.entity.ts"
+      "../src/solutions/solutions.service.ts"
     ]
   },
   "version": "3.8.3"

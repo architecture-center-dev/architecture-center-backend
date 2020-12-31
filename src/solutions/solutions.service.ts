@@ -19,7 +19,7 @@ export class SolutionsService {
 
   findAll(filter:String) {
 
-    const query = filter != null ?
+    const query = (filter != null && filter != "") ?
     {
       where: {
         $or:[

@@ -9,17 +9,39 @@ export class Solution {
     @Field(type => String)
     solution_id: ObjectID;
 
-    @Field({nullable: true})
-    @Column({ nullable: true })
+    @Field()
+    @Column()
     name: String;
 
-    @Field(type => [String])
-    @Column({ array: true})
+    @Field()
+    @Column()
+    customer: String;
+
+    @Field()
+    @Column()
+    project: String;
+
+    @Field()
+    @Column()
+    market: String;
+
+    @Field()
+    @Column()
+    year_month: String;
+
+    @Field()
+    @Column()
+    description: String;
+
+    @Field(type => [String],{nullable:true})
+    @Column({ array: true, nullable:true})
     tags: String;
     
+    @Field(type => Date)
     @CreateDateColumn()
     created_at: Date;
 
+    @Field(type => Date)
     @UpdateDateColumn()
     updated_at: Date;
 }

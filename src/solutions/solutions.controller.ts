@@ -8,13 +8,13 @@ import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 export class SolutionsController {
   constructor(private readonly solutionsService: SolutionsService) {}
 
-  @UseGuards(JwtAuthGuard)
+  //@UseGuards(JwtAuthGuard)
   @Post()
   create(@Body() createSolutionDto: CreateSolutionDto) {
     return this.solutionsService.create(createSolutionDto);
   }
 
-  @UseGuards(JwtAuthGuard)
+  //@UseGuards(JwtAuthGuard)
   @Get()
   findAll(@Query() query: Object) {
 

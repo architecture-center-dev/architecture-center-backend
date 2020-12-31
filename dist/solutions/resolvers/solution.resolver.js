@@ -13,7 +13,6 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const graphql_1 = require("@nestjs/graphql");
-const common_1 = require("@nestjs/common");
 const gql_auth_guard_1 = require("../../auth/guards/gql.auth.guard");
 const current_user_decorator_1 = require("../../auth/decorators/current-user.decorator");
 const solutions_service_1 = require("../solutions.service");
@@ -23,13 +22,11 @@ let SolutionResolver = class SolutionResolver {
         this.solutionService = solutionService;
     }
     async solution(search) {
-        console.log(search);
         const solutions = await this.solutionService.findAll(search);
         return solutions;
     }
 };
 __decorate([
-    common_1.UseGuards(gql_auth_guard_1.GqlAuthGuard),
     graphql_1.Query(returns => [solution_entity_1.Solution]),
     __param(0, graphql_1.Args({ name: 'search', nullable: true })),
     __metadata("design:type", Function),

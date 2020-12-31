@@ -19,20 +19,47 @@ __decorate([
     __metadata("design:type", typeorm_1.ObjectID)
 ], Solution.prototype, "solution_id", void 0);
 __decorate([
-    graphql_1.Field({ nullable: true }),
-    typeorm_1.Column({ nullable: true }),
+    graphql_1.Field(),
+    typeorm_1.Column(),
     __metadata("design:type", String)
 ], Solution.prototype, "name", void 0);
 __decorate([
-    graphql_1.Field(type => [String]),
-    typeorm_1.Column({ array: true }),
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Solution.prototype, "customer", void 0);
+__decorate([
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Solution.prototype, "project", void 0);
+__decorate([
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Solution.prototype, "market", void 0);
+__decorate([
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Solution.prototype, "year_month", void 0);
+__decorate([
+    graphql_1.Field(),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Solution.prototype, "description", void 0);
+__decorate([
+    graphql_1.Field(type => [String], { nullable: true }),
+    typeorm_1.Column({ array: true, nullable: true }),
     __metadata("design:type", String)
 ], Solution.prototype, "tags", void 0);
 __decorate([
+    graphql_1.Field(type => Date),
     typeorm_1.CreateDateColumn(),
     __metadata("design:type", Date)
 ], Solution.prototype, "created_at", void 0);
 __decorate([
+    graphql_1.Field(type => Date),
     typeorm_1.UpdateDateColumn(),
     __metadata("design:type", Date)
 ], Solution.prototype, "updated_at", void 0);
