@@ -7,5 +7,6 @@ export class CreateSolutionDto {
     year_month: String;
     description: String;
     tags: String;
+    big_picture: String;
     team_members: String;
 }

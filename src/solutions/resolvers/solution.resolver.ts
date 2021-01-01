@@ -23,7 +23,7 @@ export class SolutionResolver {
   public async solutionById(@Args({ name: 'solution_id' }) solution_id: string) {
 
     const solution: Solution = await this.solutionService.findOne({where:{_id: new ObjectId(solution_id)}} as object);
-    console.log(solution);
+    
     return solution;
   }
 

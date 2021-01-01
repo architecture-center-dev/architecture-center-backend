@@ -4537,8 +4537,8 @@
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
       "../src/solutions/dto/create-solution.dto.ts": {
-        "version": "688d47cea25afc6bca47230d330d3e06244730c328fba9d681660953d83aa43c",
-        "signature": "a7edcd38de0f2594cf4c712046c11889f031d117413c0557af02439f9a2c19ff"
+        "version": "18972c9b7e4e25415f8780aa72f0af5992b8dd617abc22e5236f42ae1988c06c",
+        "signature": "a902dda5545d594b8d5e1cc4cd80bd48235409830b367778857db35a7119322b"
       },
       "../node_modules/@nestjs/mapped-types/dist/intersection-type.helper.d.ts": {
         "version": "2dd9d764938d20a0613b89b14d7da644f7be4a70d22f18c3019254029d7a7a3c",
@@ -4573,8 +4573,8 @@
         "signature": "7f8d497acf02d439c90a4dd2162dbfff9391905c0c8f81f144bded3b257e0e6b"
       },
       "../src/solutions/entities/solution.entity.ts": {
-        "version": "af4fb3cd02099d814ffaae8baf27af8cb91f49df5b67c7895168f7ee6905a36a",
-        "signature": "b6fe5ade195068c21521d8ecf939295412ddaedbeb5e8d2feb185d1f424413c2"
+        "version": "8231cc981c30cd3a55a84239bea70ae7e29c02e20f2ad24615185a0cb53dbccf",
+        "signature": "40a51847c3ee20278b63a6669df5f53ae1c31d72adbbcab95af944d38f30e43a"
       },
       "../src/solutions/solutions.service.ts": {
         "version": "58fc115db75277b0876f3245eb0fd617561623d63309f070a8d85593fa2cca16",
@@ -4585,7 +4585,7 @@
         "signature": "7979bb03f4b59cd28f81a7a7f53276969fbe6d1a9b09a085d914dd339deaeee9"
       },
       "../src/solutions/resolvers/solution.resolver.ts": {
-        "version": "ed760d4a2994f3e7f8eb6f76342dbfc37496ca1707286d803b18f09d69200642",
+        "version": "016c42f90af974a4562bc4e33da02e1bec710636ca24d9f5e623d49fc7ef10eb",
         "signature": "67615a236524ddb3810374114db5f5742448ea6b92195f7ea420faa6291b421e"
       },
       "../src/solutions/solutions.module.ts": {
@@ -4601,7 +4601,7 @@
         "signature": "eeee1d102284187049bcd6b1416cb5e6d852d455e74942c8fbd473664e7751dc"
       },
       "../src/main.ts": {
-        "version": "1b1dfdfe1085237b0667a5a8254dc1e0aa5d568e724fb4466009b6a85168e302",
+        "version": "1e9c2a8120bb3feab9f9642b0aacc92fda65a076df19da96f49719a5893180cd",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
@@ -4767,6 +4767,10 @@
       "../node_modules/@types/uglify-js/index.d.ts": {
         "version": "0c1e70a2f45adf86443682f17f955c1100041255d03863348ff09481860bdd2d",
         "signature": "0c1e70a2f45adf86443682f17f955c1100041255d03863348ff09481860bdd2d"
+      },
+      "../node_modules/@types/validator/index.d.ts": {
+        "version": "3ff2dd07f8aa032e6eb7ffacd8f4e1f0b8dac4ba02c1f6ea1413187aef947ec9",
+        "signature": "3ff2dd07f8aa032e6eb7ffacd8f4e1f0b8dac4ba02c1f6ea1413187aef947ec9"
       },
       "../node_modules/anymatch/index.d.ts": {
         "version": "4fb0b7d532aa6fb850b6cd2f1ee4f00802d877b5c66a51903bc1fb0624126349",
@@ -15887,6 +15891,7 @@
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../src/main.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/core/index.d.ts",
         "../src/app.module.ts",
         "../src/cluster.service.ts",
@@ -16213,6 +16218,13 @@
       ],
       "../node_modules/@types/uglify-js/index.d.ts": [
         "../node_modules/source-map/source-map.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../node_modules/@types/validator/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -27437,6 +27449,13 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../node_modules/@types/validator/index.d.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../node_modules/anymatch/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -28629,9 +28648,10 @@
       "../node_modules/@nestjs/mapped-types/dist/index.d.ts",
       "../node_modules/@nestjs/mapped-types/index.d.ts",
       "../src/solutions/dto/update-solution.dto.ts",
-      "../src/solutions/entities/solution.entity.ts",
       "../src/solutions/solutions.service.ts",
       "../src/solutions/solutions.controller.ts",
+      "../src/solutions/resolvers/solution.resolver.ts",
+      "../src/solutions/solutions.module.ts",
       "../src/app.module.ts",
       "../src/cluster.service.ts",
       "../src/main.ts",
@@ -28676,13 +28696,13 @@
       "../node_modules/@types/tapable/index.d.ts",
       "../node_modules/source-map/source-map.d.ts",
       "../node_modules/@types/uglify-js/index.d.ts",
+      "../node_modules/@types/validator/index.d.ts",
       "../node_modules/anymatch/index.d.ts",
       "../node_modules/@types/webpack-sources/index.d.ts",
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/solutions/resolvers/solution.resolver.ts",
-      "../src/solutions/solutions.module.ts"
+      "../src/solutions/entities/solution.entity.ts"
     ]
   },
   "version": "3.8.3"

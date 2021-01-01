@@ -27,7 +27,6 @@ let SolutionResolver = class SolutionResolver {
     }
     async solutionById(solution_id) {
         const solution = await this.solutionService.findOne({ where: { _id: new mongodb_1.ObjectId(solution_id) } });
-        console.log(solution);
         return solution;
     }
     async createTagSolution(solution_id, tag) {

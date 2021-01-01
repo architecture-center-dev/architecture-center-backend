@@ -49,6 +49,11 @@ __decorate([
     __metadata("design:type", String)
 ], Solution.prototype, "description", void 0);
 __decorate([
+    graphql_1.Field(type => String, { nullable: true }),
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Solution.prototype, "big_picture", void 0);
+__decorate([
     graphql_1.Field(type => [String], { nullable: true }),
     typeorm_1.Column({ array: true, nullable: true }),
     __metadata("design:type", String)

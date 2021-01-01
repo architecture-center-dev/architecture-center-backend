@@ -32,6 +32,10 @@ export class Solution {
     @Field()
     @Column()
     description: String;
+    
+    @Field(type => String,{nullable:true})
+    @Column()
+    big_picture: String;
 
     @Field(type => [String],{nullable:true})
     @Column({ array: true, nullable:true})

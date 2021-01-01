@@ -7,6 +7,7 @@ export declare class Solution {
     market: String;
     year_month: String;
     description: String;
+    big_picture: String;
     tags: String;
     team_members: String;
     created_at: Date;
