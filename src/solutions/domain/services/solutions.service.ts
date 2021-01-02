@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { getRepository, Repository } from 'typeorm';
-import { CreateSolutionDto } from './dto/create-solution.dto';
-import { UpdateSolutionDto } from './dto/update-solution.dto';
-import { Solution } from './entities/solution.entity';
+import { CreateSolutionDto } from '../dto/create-solution.dto';
+import { UpdateSolutionDto } from '../dto/update-solution.dto';
+import { Solution } from '../entities/solution.entity';
 import {ObjectID} from 'mongodb'
 
 @Injectable()

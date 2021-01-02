@@ -33,5 +33,3 @@ export class Attachment {
     @UpdateDateColumn()
     updated_at: Date;
 }
-
-  

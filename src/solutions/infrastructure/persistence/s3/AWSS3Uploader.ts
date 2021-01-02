@@ -1,5 +1,6 @@
 import {S3, Credentials} from "aws-sdk";
 import stream, {PassThrough} from "stream"
+import {IUploader, File, UploadedFileResponse} from "../../../domain/services/IUploader.interface"
 
 type S3UploadConfig = {
   accessKeyId: string;
@@ -12,26 +13,6 @@ type S3UploadStream = {
     writeStream: stream.PassThrough;
     promise: Promise<AWS.S3.ManagedUpload.SendData>;
   };
-
-export type File = {
-    filename: string;
-    mimetype: string;
-    encoding: string;
-    createReadStream?: any;
-  }
-  
-  export type UploadedFileResponse = {
-    filename: string;
-    mimetype: string;
-    encoding: string;
-    url: string;
-  }
-  
-  export interface IUploader {
-    singleFileUploadResolver: (
-     { file } : { file: Promise<File> }
-    ) => Promise<UploadedFileResponse>;
-  }
 
 export class AWSS3Uploader implements IUploader{
   private s3: AWS.S3;
@@ -69,9 +50,7 @@ export class AWSS3Uploader implements IUploader{
     };
   }
 
-  async singleFileUploadResolver(
-    { file }: { file: Promise<File> }
-  ): Promise<UploadedFileResponse> {
+  async singleFileUploadResolver( file :  Promise<File> ): Promise<UploadedFileResponse> {
 
     const { createReadStream, filename, mimetype, encoding } = await file;
     

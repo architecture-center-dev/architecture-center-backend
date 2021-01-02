@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const graphql_1 = require("@nestjs/graphql");
 const gql_auth_guard_1 = require("../../auth/guards/gql.auth.guard");
 const solutions_service_1 = require("../solutions.service");
-const solution_entity_1 = require("../entities/solution.entity");
+const solution_entity_1 = require("../domain/entities/solution.entity");
 const mongodb_1 = require("mongodb");
 const AWSS3Uploader_1 = require("../infrastructure/persistence/s3/AWSS3Uploader");
 const graphql_tools_1 = require("graphql-tools");

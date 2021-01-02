@@ -4536,7 +4536,7 @@
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
-      "../src/solutions/dto/create-solution.dto.ts": {
+      "../src/solutions/domain/dto/create-solution.dto.ts": {
         "version": "18972c9b7e4e25415f8780aa72f0af5992b8dd617abc22e5236f42ae1988c06c",
         "signature": "a902dda5545d594b8d5e1cc4cd80bd48235409830b367778857db35a7119322b"
       },
@@ -4568,21 +4568,21 @@
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f"
       },
-      "../src/solutions/dto/update-solution.dto.ts": {
+      "../src/solutions/domain/dto/update-solution.dto.ts": {
         "version": "9317a74f9bc9aa07d8d10c4b00a664ce9dca4230bcf83b7d21cfdd7f052321e2",
         "signature": "7f8d497acf02d439c90a4dd2162dbfff9391905c0c8f81f144bded3b257e0e6b"
       },
-      "../src/solutions/entities/solution.entity.ts": {
+      "../src/solutions/domain/entities/solution.entity.ts": {
         "version": "8231cc981c30cd3a55a84239bea70ae7e29c02e20f2ad24615185a0cb53dbccf",
         "signature": "40a51847c3ee20278b63a6669df5f53ae1c31d72adbbcab95af944d38f30e43a"
       },
-      "../src/solutions/solutions.service.ts": {
-        "version": "58fc115db75277b0876f3245eb0fd617561623d63309f070a8d85593fa2cca16",
-        "signature": "a75efc80bc7e49254c29f0914d8316fb9a1cb304531a39f968335485de31141a"
+      "../src/solutions/domain/services/solutions.service.ts": {
+        "version": "2d349016a41a3c87d9d3c4bfd94bd06429e02dbbf0fc14ec6f82a7fb43797cc7",
+        "signature": "7f5d1a62ff15f964645138ed19075b4bb89b039e1b9a99c11f42170f3ca79170"
       },
-      "../src/solutions/solutions.controller.ts": {
-        "version": "e7ddb40154295518db470e9e95f3a1786e2c288e20dcd011721af450ee95ec0e",
-        "signature": "7979bb03f4b59cd28f81a7a7f53276969fbe6d1a9b09a085d914dd339deaeee9"
+      "../src/solutions/application/adapters/rest/solutions.controller.ts": {
+        "version": "1e5aad4b232372a7c917ab43ce8e3cbdebff3bf505de8d2d274aef4265f2ba3d",
+        "signature": "17d6efa27ec5e9c14ad64cc5a5ae759197412954ac6bc5e1d2b05dda2d28bab2"
       },
       "../node_modules/aws-sdk/lib/error.d.ts": {
         "version": "aee22a16add1c6362d3f37af8f779595330b223ed5dcdd612bc7e5ef473017a4",
@@ -5792,9 +5792,13 @@
         "version": "1b8e2370aa2872687e7ab84dcf4c565ad5515b28c098b11d68a2d67d5e51095f",
         "signature": "1b8e2370aa2872687e7ab84dcf4c565ad5515b28c098b11d68a2d67d5e51095f"
       },
+      "../src/solutions/domain/services/iuploader.interface.ts": {
+        "version": "a6b5a7f44c4aed43d0e62a6298443fc35f361cf54adfae82deeb69adbdbc088e",
+        "signature": "5dfc9cc2f3af055238785098f30224e52dda3f4b7856738700941e8c70268fb1"
+      },
       "../src/solutions/infrastructure/persistence/s3/awss3uploader.ts": {
-        "version": "2286112944141e96840f5abcff1f35e13e74d19aa08622d0dc2a3885b9882e89",
-        "signature": "e4d475ac7d2f6aac4ea730bf4a5efe171d545b3736b2bb98fad4552ecb7287a8"
+        "version": "12101f9c6ce3df64e007c3e637dae3c6cb1efe8656eff3fda7ecba94a292284f",
+        "signature": "a4a528a9d2020dc84ff762714ebbc682f35876c95f8666cd4dbf1fa9bcba7ec6"
       },
       "../node_modules/graphql-tools/utils/schemavisitor.d.ts": {
         "version": "d9aa2d8f44b543c0a19a2eeb3b2e84caa413eec3fa5d4804c46744fcc071a38a",
@@ -6128,20 +6132,24 @@
         "version": "e1c6815664e547ae4e8b67af3ec96740aaae9e6b0c379a8121c337cec46cbe62",
         "signature": "e1c6815664e547ae4e8b67af3ec96740aaae9e6b0c379a8121c337cec46cbe62"
       },
-      "../src/solutions/entities/attachment.entity.ts": {
-        "version": "401cc08e2883ad0c9fc730ea3cc610fcfe963ef48afb6f72d9452a158f480366",
+      "../src/solutions/domain/entities/attachment.entity.ts": {
+        "version": "0cb46f50473b6602778813988894a2b863e6c84ba9510cc586ddd04d5a15fa25",
         "signature": "d7c490e4b288a6ba5c8763b22cf64b58e12a3ed528d6246bba078526ec83299c"
       },
-      "../src/solutions/resolvers/solution.resolver.ts": {
-        "version": "a95e59f9956a3c920a524ac67b2ebafbce2c987e9cc954502ff36c7e0385155b",
-        "signature": "145c6e7af4a7c866141482091766d7b802a9d8a4821d271d7f4d52b7ec13dde2"
+      "../src/solutions/domain/services/attachment.service.ts": {
+        "version": "28abd8bad4698800aa1dcfd84a2df2b503a6212370e5de568d754b6459aa15cd",
+        "signature": "9712ae75e5fd065d3e3d52bcfad91841fb0eaf39a92655997c2606eed607f480"
+      },
+      "../src/solutions/application/adapters/grapghql/resolvers/solution.resolver.ts": {
+        "version": "fc9553baa754047d64fbaf7133b554af3fc47608dee8a358d8320e44d47baa90",
+        "signature": "73fc13af87ae9a8d825d93d020933128007a1a0577eda84353e71e890a659aaa"
       },
       "../src/solutions/solutions.module.ts": {
-        "version": "17fe5424a33405ab935d5e07600f49c80710a59fd6f1f78f2d27d1e1844cf790",
+        "version": "bfab4830f328b86076de3f2c5ede9cf8bdcbfad5e2b2a5b5199b5c4ab7c9408c",
         "signature": "c73fcedc30c11e26baf0a815f7def08ab725bb5f3482504bcb5821429e404ed5"
       },
       "../src/app.module.ts": {
-        "version": "8f260551162dea30304c829fb2f4d85312b7e875d52d8ee544c52ad09e6316a6",
+        "version": "394838ec82e88eb15d78b202abd3f33c58e6ecf272ff267ce845c118fb5e0a93",
         "signature": "b82491e2990291580288c5602d4c017238977749d52b17391f0e45d9a29be644"
       },
       "../src/cluster.service.ts": {
@@ -6151,6 +6159,10 @@
       "../src/main.ts": {
         "version": "1e9c2a8120bb3feab9f9642b0aacc92fda65a076df19da96f49719a5893180cd",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881"
+      },
+      "../src/solutions/domain/dto/create-attachment-dto.ts": {
+        "version": "50dcc14652e9aa0cf19ac2ea5d0b4601dbf466f59ee64c9ec230d0d1debf19e8",
+        "signature": "d3a3cf3fe0fe1170e9ca8a4800944e60b56424c6dda59f916031dcd277940076"
       },
       "../node_modules/@types/anymatch/index.d.ts": {
         "version": "48b52264fa193879a074197839dbb4796fa07e86350ff888e5361e06aa46df76",
@@ -17277,7 +17289,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/solutions/dto/create-solution.dto.ts": [
+      "../src/solutions/domain/dto/create-solution.dto.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -17344,16 +17356,16 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/solutions/dto/update-solution.dto.ts": [
+      "../src/solutions/domain/dto/update-solution.dto.ts": [
         "../node_modules/@nestjs/mapped-types/index.d.ts",
-        "../src/solutions/dto/create-solution.dto.ts",
+        "../src/solutions/domain/dto/create-solution.dto.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/solutions/entities/solution.entity.ts": [
+      "../src/solutions/domain/entities/solution.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -17362,24 +17374,24 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/solutions/solutions.service.ts": [
+      "../src/solutions/domain/services/solutions.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/solutions/dto/create-solution.dto.ts",
-        "../src/solutions/dto/update-solution.dto.ts",
-        "../src/solutions/entities/solution.entity.ts",
+        "../src/solutions/domain/dto/create-solution.dto.ts",
+        "../src/solutions/domain/dto/update-solution.dto.ts",
+        "../src/solutions/domain/entities/solution.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/solutions/solutions.controller.ts": [
+      "../src/solutions/application/adapters/rest/solutions.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../src/solutions/solutions.service.ts",
-        "../src/solutions/dto/create-solution.dto.ts",
-        "../src/solutions/dto/update-solution.dto.ts",
+        "../src/solutions/domain/services/solutions.service.ts",
+        "../src/solutions/domain/dto/create-solution.dto.ts",
+        "../src/solutions/domain/dto/update-solution.dto.ts",
         "../src/auth/guards/jwt-auth.guard.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -21176,9 +21188,17 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/solutions/domain/services/iuploader.interface.ts": [
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/solutions/infrastructure/persistence/s3/awss3uploader.ts": [
         "../node_modules/aws-sdk/index.d.ts",
         "../node_modules/@types/node/stream.d.ts",
+        "../src/solutions/domain/services/iuploader.interface.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -21980,7 +22000,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/solutions/entities/attachment.entity.ts": [
+      "../src/solutions/domain/entities/attachment.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -21989,15 +22009,29 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/solutions/resolvers/solution.resolver.ts": [
+      "../src/solutions/domain/services/attachment.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/solutions/domain/entities/attachment.entity.ts",
+        "../src/solutions/domain/services/iuploader.interface.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/solutions/application/adapters/grapghql/resolvers/solution.resolver.ts": [
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/auth/guards/gql.auth.guard.ts",
-        "../src/solutions/solutions.service.ts",
-        "../src/solutions/entities/solution.entity.ts",
+        "../src/solutions/domain/services/solutions.service.ts",
+        "../src/solutions/domain/entities/solution.entity.ts",
         "../src/solutions/infrastructure/persistence/s3/awss3uploader.ts",
         "../node_modules/graphql-tools/index.d.ts",
-        "../src/solutions/entities/attachment.entity.ts",
+        "../src/solutions/domain/entities/attachment.entity.ts",
+        "../src/solutions/domain/services/iuploader.interface.ts",
+        "../src/solutions/domain/services/attachment.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -22006,11 +22040,13 @@
       ],
       "../src/solutions/solutions.module.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../src/solutions/solutions.service.ts",
-        "../src/solutions/solutions.controller.ts",
+        "../src/solutions/domain/services/solutions.service.ts",
+        "../src/solutions/application/adapters/rest/solutions.controller.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
-        "../src/solutions/entities/solution.entity.ts",
-        "../src/solutions/resolvers/solution.resolver.ts",
+        "../src/solutions/domain/entities/solution.entity.ts",
+        "../src/solutions/application/adapters/grapghql/resolvers/solution.resolver.ts",
+        "../src/solutions/domain/services/attachment.service.ts",
+        "../src/solutions/domain/entities/attachment.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -22026,7 +22062,8 @@
         "../node_modules/@nestjs/graphql/index.d.ts",
         "../node_modules/@nestjs/config/index.d.ts",
         "../src/solutions/solutions.module.ts",
-        "../src/solutions/entities/solution.entity.ts",
+        "../src/solutions/domain/entities/solution.entity.ts",
+        "../src/solutions/domain/entities/attachment.entity.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -22048,6 +22085,13 @@
         "../node_modules/@nestjs/core/index.d.ts",
         "../src/app.module.ts",
         "../src/cluster.service.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/solutions/domain/dto/create-attachment-dto.ts": [
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -33256,24 +33300,24 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/solutions/dto/update-solution.dto.ts": [
+      "../src/solutions/domain/dto/update-solution.dto.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../src/solutions/dto/create-solution.dto.ts"
+        "../src/solutions/domain/dto/create-solution.dto.ts"
       ],
-      "../src/solutions/entities/solution.entity.ts": [
+      "../src/solutions/domain/entities/solution.entity.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
-      "../src/solutions/solutions.service.ts": [
+      "../src/solutions/domain/services/solutions.service.ts": [
         "../node_modules/typeorm/index.d.ts",
-        "../src/solutions/entities/solution.entity.ts",
-        "../src/solutions/dto/create-solution.dto.ts",
-        "../src/solutions/dto/update-solution.dto.ts"
+        "../src/solutions/domain/entities/solution.entity.ts",
+        "../src/solutions/domain/dto/create-solution.dto.ts",
+        "../src/solutions/domain/dto/update-solution.dto.ts"
       ],
-      "../src/solutions/solutions.controller.ts": [
-        "../src/solutions/entities/solution.entity.ts",
-        "../src/solutions/solutions.service.ts",
-        "../src/solutions/dto/create-solution.dto.ts",
-        "../src/solutions/dto/update-solution.dto.ts"
+      "../src/solutions/application/adapters/rest/solutions.controller.ts": [
+        "../src/solutions/domain/entities/solution.entity.ts",
+        "../src/solutions/domain/services/solutions.service.ts",
+        "../src/solutions/domain/dto/create-solution.dto.ts",
+        "../src/solutions/domain/dto/update-solution.dto.ts"
       ],
       "../node_modules/aws-sdk/lib/error.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
@@ -37064,6 +37108,9 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/solutions/infrastructure/persistence/s3/awss3uploader.ts": [
+        "../src/solutions/domain/services/iuploader.interface.ts"
+      ],
       "../node_modules/graphql-tools/utils/schemavisitor.d.ts": [
         "../node_modules/graphql/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
@@ -37859,12 +37906,19 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/solutions/entities/attachment.entity.ts": [
+      "../src/solutions/domain/entities/attachment.entity.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
-      "../src/solutions/resolvers/solution.resolver.ts": [
-        "../src/solutions/solutions.service.ts",
-        "../src/solutions/entities/solution.entity.ts"
+      "../src/solutions/domain/services/attachment.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/solutions/domain/entities/attachment.entity.ts",
+        "../src/solutions/domain/services/iuploader.interface.ts"
+      ],
+      "../src/solutions/application/adapters/grapghql/resolvers/solution.resolver.ts": [
+        "../src/solutions/domain/services/solutions.service.ts",
+        "../src/solutions/domain/services/attachment.service.ts",
+        "../src/solutions/domain/entities/solution.entity.ts",
+        "../src/solutions/domain/entities/attachment.entity.ts"
       ],
       "../node_modules/@types/anymatch/index.d.ts": [
         "../node_modules/@types/node/fs.d.ts",
@@ -39379,7 +39433,7 @@
       "../node_modules/@nestjs/config/dist/utils/index.d.ts",
       "../node_modules/@nestjs/config/dist/index.d.ts",
       "../node_modules/@nestjs/config/index.d.ts",
-      "../src/solutions/dto/create-solution.dto.ts",
+      "../src/solutions/domain/dto/create-solution.dto.ts",
       "../node_modules/@nestjs/mapped-types/dist/intersection-type.helper.d.ts",
       "../node_modules/@nestjs/mapped-types/dist/omit-type.helper.d.ts",
       "../node_modules/@nestjs/mapped-types/dist/partial-type.helper.d.ts",
@@ -39387,10 +39441,10 @@
       "../node_modules/@nestjs/mapped-types/dist/type-helpers.utils.d.ts",
       "../node_modules/@nestjs/mapped-types/dist/index.d.ts",
       "../node_modules/@nestjs/mapped-types/index.d.ts",
-      "../src/solutions/dto/update-solution.dto.ts",
-      "../src/solutions/entities/solution.entity.ts",
-      "../src/solutions/solutions.service.ts",
-      "../src/solutions/solutions.controller.ts",
+      "../src/solutions/domain/dto/update-solution.dto.ts",
+      "../src/solutions/domain/entities/solution.entity.ts",
+      "../src/solutions/domain/services/solutions.service.ts",
+      "../src/solutions/application/adapters/rest/solutions.controller.ts",
       "../node_modules/aws-sdk/lib/error.d.ts",
       "../node_modules/aws-sdk/lib/credentials.d.ts",
       "../node_modules/aws-sdk/lib/credentials/credential_provider_chain.d.ts",
@@ -39693,6 +39747,7 @@
       "../node_modules/aws-sdk/lib/shared-ini/ini-loader.d.ts",
       "../node_modules/aws-sdk/lib/core.d.ts",
       "../node_modules/aws-sdk/index.d.ts",
+      "../src/solutions/domain/services/iuploader.interface.ts",
       "../src/solutions/infrastructure/persistence/s3/awss3uploader.ts",
       "../node_modules/graphql-tools/utils/schemavisitor.d.ts",
       "../node_modules/graphql-tools/utils/schemadirectivevisitor.d.ts",
@@ -39777,11 +39832,13 @@
       "../node_modules/graphql-tools/wrap/makeremoteexecutableschema.d.ts",
       "../node_modules/graphql-tools/wrap/index.d.ts",
       "../node_modules/graphql-tools/index.d.ts",
-      "../src/solutions/entities/attachment.entity.ts",
+      "../src/solutions/domain/entities/attachment.entity.ts",
+      "../src/solutions/domain/services/attachment.service.ts",
       "../src/solutions/solutions.module.ts",
       "../src/app.module.ts",
       "../src/cluster.service.ts",
       "../src/main.ts",
+      "../src/solutions/domain/dto/create-attachment-dto.ts",
       "../node_modules/@types/anymatch/index.d.ts",
       "../node_modules/@babel/types/lib/index.d.ts",
       "../node_modules/@types/babel__generator/index.d.ts",
@@ -39829,7 +39886,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/solutions/resolvers/solution.resolver.ts"
+      "../src/solutions/application/adapters/grapghql/resolvers/solution.resolver.ts"
     ]
   },
   "version": "3.8.3"
