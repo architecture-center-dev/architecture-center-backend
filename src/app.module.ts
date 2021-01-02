@@ -22,6 +22,10 @@ import { Solution } from './solutions/entities/solution.entity';
     GraphQLModule.forRoot({
       autoSchemaFile: 'src/schema/schema.gql',
       context: ({ req }) => ({ req }),
+      uploads: {
+        maxFileSize: 10000000, // 10 MB
+        maxFiles: 5
+      }
     }),
     UsersModule,
     AuthModule,

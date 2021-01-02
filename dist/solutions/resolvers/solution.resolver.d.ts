@@ -7,4 +7,5 @@ export declare class SolutionResolver {
     solutionById(solution_id: string): Promise<Solution>;
     createTagSolution(solution_id: string, tag: string): Promise<Solution>;
     createTeamMemberSolution(solution_id: string, team_member: string): Promise<Solution>;
+    singleFileUpload(file: any): Promise<boolean>;
 }

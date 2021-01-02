@@ -45,6 +45,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.5.4",
+    "stream": "^0.0.2",
     "typeorm": "^0.2.24"
   },
   "devDependencies": {
@@ -85,5 +86,8 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "resolutions": {
+    "graphql-upload": "^11.0.0"
   }
 }

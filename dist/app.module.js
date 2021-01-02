@@ -32,6 +32,10 @@ AppModule = __decorate([
             graphql_1.GraphQLModule.forRoot({
                 autoSchemaFile: 'src/schema/schema.gql',
                 context: ({ req }) => ({ req }),
+                uploads: {
+                    maxFileSize: 10000000,
+                    maxFiles: 5
+                }
             }),
             users_module_1.UsersModule,
             auth_module_1.AuthModule,

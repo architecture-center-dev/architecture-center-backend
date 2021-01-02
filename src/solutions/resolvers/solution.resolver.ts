@@ -4,6 +4,9 @@ import { GqlAuthGuard } from 'src/auth/guards/gql.auth.guard';
 import { SolutionsService } from '../solutions.service';
 import { Solution } from '../entities/solution.entity';
 import {ObjectId} from "mongodb"
+import {AWSS3Uploader, UploadedFileResponse, File} from "../infrastructure/persistence/s3/AWSS3Uploader"
+import { GraphQLUpload } from 'graphql-tools';
+import { Attachment } from '../entities/attachment.entity';
 
 @Resolver('Solutions')
 export class SolutionResolver {
@@ -47,5 +50,22 @@ export class SolutionResolver {
     const result: Solution = await this.solutionService.createTeamMember(solution_id, team_member);
     
     return result;
+  }
+  
+  @Mutation(() => Boolean, { nullable: true })
+  public async singleFileUpload(
+    @Args({ name: 'file', type: () => GraphQLUpload }) file
+  ) {
+
+    const s3Uploader = new AWSS3Uploader({ 
+      accessKeyId: process.env.AWS_ACCESS_KEY,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+      destinationBucketName: 'architecture-center',
+      region: "us-east-1"
+    });
+    
+    const fileUploaded = await s3Uploader.singleFileUploadResolver({file});
+    console.log(fileUploaded);
+    return true;
   }
 }
