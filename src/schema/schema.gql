@@ -51,10 +51,27 @@ type Attachment {
   updated_at: DateTime!
 }
 
+type Canvas {
+  canvas_id: String!
+  solution_id: String!
+  dependencies: [String!]
+  technology: [String!]
+  patterns: [String!]
+  problem: [String!]
+  func_requirement: [String!]
+  non_func_requirement: [String!]
+  context: [String!]
+  difficulties: [String!]
+  advantages: [String!]
+  created_at: DateTime!
+  updated_at: DateTime!
+}
+
 type Query {
   users: [User!]!
   solution(search: String): [Solution!]!
   solutionById(solution_id: String!): Solution
+  canvasBySolutionId(solution_id: String!): Canvas
 }
 
 type Mutation {
@@ -62,7 +79,22 @@ type Mutation {
   createTagSolution(tag: String!, solution_id: String!): Solution!
   createTeamMemberSolution(team_member: String!, solution_id: String!): Solution!
   singleFileUpload(solution_id: String!, file: Upload!): Attachment
+  createCanvas(canvas: CreateCanvasDto!): Canvas!
+  createItemCanvas(value: String!, item: String!, canvas_id: String!): Canvas!
 }
 
 """The `Upload` scalar type represents a file upload."""
 scalar Upload
+
+input CreateCanvasDto {
+  solution_id: String!
+  dependencies: [String!]
+  technology: [String!]
+  patterns: [String!]
+  problem: [String!]
+  func_requirement: [String!]
+  non_func_requirement: [String!]
+  context: [String!]
+  difficulties: [String!]
+  advantages: [String!]
+}

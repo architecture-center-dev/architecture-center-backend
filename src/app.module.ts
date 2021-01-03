@@ -8,6 +8,7 @@ import { ConfigModule } from '@nestjs/config';
 import { SolutionsModule } from './solutions/solutions.module';
 import { Solution } from './solutions/domain/entities/solution.entity';
 import { Attachment } from './solutions/domain/entities/attachment.entity';
+import { Canvas } from './solutions/domain/entities/canvas.entity';
 
 @Module({
   imports: [
@@ -17,7 +18,7 @@ import { Attachment } from './solutions/domain/entities/attachment.entity';
       host: process.env.HOST_DB,
       port: process.env.PORT_DB as any,
       database: process.env.DATABASE,
-      entities: [User, Solution, Attachment],
+      entities: [User, Solution, Attachment, Canvas],
       logging: true,
     }),
     GraphQLModule.forRoot({

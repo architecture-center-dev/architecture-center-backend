@@ -12,17 +12,20 @@ const solutions_controller_1 = require("./application/adapters/rest/solutions.co
 const typeorm_1 = require("@nestjs/typeorm");
 const solution_entity_1 = require("./domain/entities/solution.entity");
 const solution_resolver_1 = require("./application/adapters/grapghql/resolvers/solution.resolver");
+const canvas_resolver_1 = require("./application/adapters/grapghql/resolvers/canvas.resolver");
 const attachment_service_1 = require("./domain/services/attachment.service");
 const attachment_entity_1 = require("./domain/entities/attachment.entity");
+const canvas_service_1 = require("./domain/services/canvas.service");
+const canvas_entity_1 = require("./domain/entities/canvas.entity");
 let SolutionsModule = class SolutionsModule {
 };
 SolutionsModule = __decorate([
     common_1.Module({
         imports: [
-            typeorm_1.TypeOrmModule.forFeature([solution_entity_1.Solution, attachment_entity_1.Attachment]),
+            typeorm_1.TypeOrmModule.forFeature([solution_entity_1.Solution, attachment_entity_1.Attachment, canvas_entity_1.Canvas]),
         ],
         controllers: [solutions_controller_1.SolutionsController],
-        providers: [solutions_service_1.SolutionsService, solution_resolver_1.SolutionResolver, attachment_service_1.AttachmentService]
+        providers: [solutions_service_1.SolutionsService, solution_resolver_1.SolutionResolver, attachment_service_1.AttachmentService, canvas_service_1.CanvasService, canvas_resolver_1.CanvasResolver]
     })
 ], SolutionsModule);
 exports.SolutionsModule = SolutionsModule;

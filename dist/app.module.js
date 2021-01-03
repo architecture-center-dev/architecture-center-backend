@@ -16,6 +16,7 @@ const config_1 = require("@nestjs/config");
 const solutions_module_1 = require("./solutions/solutions.module");
 const solution_entity_1 = require("./solutions/domain/entities/solution.entity");
 const attachment_entity_1 = require("./solutions/domain/entities/attachment.entity");
+const canvas_entity_1 = require("./solutions/domain/entities/canvas.entity");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -27,7 +28,7 @@ AppModule = __decorate([
                 host: process.env.HOST_DB,
                 port: process.env.PORT_DB,
                 database: process.env.DATABASE,
-                entities: [user_entity_1.User, solution_entity_1.Solution, attachment_entity_1.Attachment],
+                entities: [user_entity_1.User, solution_entity_1.Solution, attachment_entity_1.Attachment, canvas_entity_1.Canvas],
                 logging: true,
             }),
             graphql_1.GraphQLModule.forRoot({
