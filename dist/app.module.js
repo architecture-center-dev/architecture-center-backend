@@ -14,7 +14,8 @@ const user_entity_1 = require("./users/Entities/user.entity");
 const graphql_1 = require("@nestjs/graphql");
 const config_1 = require("@nestjs/config");
 const solutions_module_1 = require("./solutions/solutions.module");
-const solution_entity_1 = require("./solutions/entities/solution.entity");
+const solution_entity_1 = require("./solutions/domain/entities/solution.entity");
+const attachment_entity_1 = require("./solutions/domain/entities/attachment.entity");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
@@ -26,12 +27,16 @@ AppModule = __decorate([
                 host: process.env.HOST_DB,
                 port: process.env.PORT_DB,
                 database: process.env.DATABASE,
-                entities: [user_entity_1.User, solution_entity_1.Solution],
+                entities: [user_entity_1.User, solution_entity_1.Solution, attachment_entity_1.Attachment],
                 logging: true,
             }),
             graphql_1.GraphQLModule.forRoot({
                 autoSchemaFile: 'src/schema/schema.gql',
                 context: ({ req }) => ({ req }),
+                uploads: {
+                    maxFileSize: 10000000,
+                    maxFiles: 5
+                }
             }),
             users_module_1.UsersModule,
             auth_module_1.AuthModule,

@@ -7,20 +7,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const solutions_service_1 = require("./solutions.service");
-const solutions_controller_1 = require("./solutions.controller");
+const solutions_service_1 = require("./domain/services/solutions.service");
+const solutions_controller_1 = require("./application/adapters/rest/solutions.controller");
 const typeorm_1 = require("@nestjs/typeorm");
-const solution_entity_1 = require("./entities/solution.entity");
-const solution_resolver_1 = require("./resolvers/solution.resolver");
+const solution_entity_1 = require("./domain/entities/solution.entity");
+const solution_resolver_1 = require("./application/adapters/grapghql/resolvers/solution.resolver");
+const attachment_service_1 = require("./domain/services/attachment.service");
+const attachment_entity_1 = require("./domain/entities/attachment.entity");
 let SolutionsModule = class SolutionsModule {
 };
 SolutionsModule = __decorate([
     common_1.Module({
         imports: [
-            typeorm_1.TypeOrmModule.forFeature([solution_entity_1.Solution]),
+            typeorm_1.TypeOrmModule.forFeature([solution_entity_1.Solution, attachment_entity_1.Attachment]),
         ],
         controllers: [solutions_controller_1.SolutionsController],
-        providers: [solutions_service_1.SolutionsService, solution_resolver_1.SolutionResolver]
+        providers: [solutions_service_1.SolutionsService, solution_resolver_1.SolutionResolver, attachment_service_1.AttachmentService]
     })
 ], SolutionsModule);
 exports.SolutionsModule = SolutionsModule;

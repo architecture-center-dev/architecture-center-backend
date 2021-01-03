@@ -15,8 +15,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const graphql_1 = require("@nestjs/graphql");
 const gql_auth_guard_1 = require("../../auth/guards/gql.auth.guard");
 const solutions_service_1 = require("../solutions.service");
-const solution_entity_1 = require("../entities/solution.entity");
+const solution_entity_1 = require("../domain/entities/solution.entity");
 const mongodb_1 = require("mongodb");
+const AWSS3Uploader_1 = require("../infrastructure/persistence/s3/AWSS3Uploader");
+const graphql_tools_1 = require("graphql-tools");
 let SolutionResolver = class SolutionResolver {
     constructor(solutionService) {
         this.solutionService = solutionService;
@@ -36,6 +38,17 @@ let SolutionResolver = class SolutionResolver {
     async createTeamMemberSolution(solution_id, team_member) {
         const result = await this.solutionService.createTeamMember(solution_id, team_member);
         return result;
+    }
+    async singleFileUpload(file) {
+        const s3Uploader = new AWSS3Uploader_1.AWSS3Uploader({
+            accessKeyId: process.env.AWS_ACCESS_KEY,
+            secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+            destinationBucketName: 'architecture-center',
+            region: "us-east-1"
+        });
+        const fileUploaded = await s3Uploader.singleFileUploadResolver({ file });
+        console.log(fileUploaded);
+        return true;
     }
 };
 __decorate([
@@ -68,6 +81,13 @@ __decorate([
     __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", Promise)
 ], SolutionResolver.prototype, "createTeamMemberSolution", null);
+__decorate([
+    graphql_1.Mutation(() => Boolean, { nullable: true }),
+    __param(0, graphql_1.Args({ name: 'file', type: () => graphql_tools_1.GraphQLUpload })),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], SolutionResolver.prototype, "singleFileUpload", null);
 SolutionResolver = __decorate([
     graphql_1.Resolver('Solutions'),
     __metadata("design:paramtypes", [solutions_service_1.SolutionsService])

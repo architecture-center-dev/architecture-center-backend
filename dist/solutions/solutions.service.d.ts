@@ -1,7 +1,7 @@
 import { Repository } from 'typeorm';
 import { CreateSolutionDto } from './dto/create-solution.dto';
 import { UpdateSolutionDto } from './dto/update-solution.dto';
-import { Solution } from './entities/solution.entity';
+import { Solution } from './domain/entities/solution.entity';
 export declare class SolutionsService {
     private userRepository;
     constructor(userRepository: Repository<Solution>);

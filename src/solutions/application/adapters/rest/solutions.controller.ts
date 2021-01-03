@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Put, Param, Delete, Query, UseGuards } from '@nestjs/common';
-import { SolutionsService } from './solutions.service';
-import { CreateSolutionDto } from './dto/create-solution.dto';
-import { UpdateSolutionDto } from './dto/update-solution.dto';
+import { SolutionsService } from '../../../domain/services/solutions.service';
+import { CreateSolutionDto } from '../../../domain/dto/create-solution.dto';
+import { UpdateSolutionDto } from '../../../domain/dto/update-solution.dto';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
 
 @Controller('solutions')

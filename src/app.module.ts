@@ -6,7 +6,8 @@ import { User } from './users/Entities/user.entity';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ConfigModule } from '@nestjs/config';
 import { SolutionsModule } from './solutions/solutions.module';
-import { Solution } from './solutions/entities/solution.entity';
+import { Solution } from './solutions/domain/entities/solution.entity';
+import { Attachment } from './solutions/domain/entities/attachment.entity';
 
 @Module({
   imports: [
@@ -16,12 +17,16 @@ import { Solution } from './solutions/entities/solution.entity';
       host: process.env.HOST_DB,
       port: process.env.PORT_DB as any,
       database: process.env.DATABASE,
-      entities: [User, Solution],
+      entities: [User, Solution, Attachment],
       logging: true,
     }),
     GraphQLModule.forRoot({
       autoSchemaFile: 'src/schema/schema.gql',
       context: ({ req }) => ({ req }),
+      uploads: {
+        maxFileSize: 10000000, // 10 MB
+        maxFiles: 5
+      }
     }),
     UsersModule,
     AuthModule,

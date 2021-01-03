@@ -41,6 +41,16 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 """
 scalar DateTime
 
+type Attachment {
+  attachment_id: String!
+  url: String!
+  filename: String!
+  encoding: String!
+  mimetype: String!
+  created_at: DateTime!
+  updated_at: DateTime!
+}
+
 type Query {
   users: [User!]!
   solution(search: String): [Solution!]!
@@ -51,4 +61,8 @@ type Mutation {
   login(password: String!, username: String!): OauthTOken!
   createTagSolution(tag: String!, solution_id: String!): Solution!
   createTeamMemberSolution(team_member: String!, solution_id: String!): Solution!
+  singleFileUpload(solution_id: String!, file: Upload!): Attachment
 }
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
