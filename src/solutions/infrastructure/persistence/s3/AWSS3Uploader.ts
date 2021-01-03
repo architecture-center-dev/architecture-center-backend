@@ -44,7 +44,8 @@ export class AWSS3Uploader implements IUploader{
         .upload({
           Bucket: this.config.destinationBucketName,
           Key: key,
-          Body: pass
+          Body: pass,
+          ACL: "public-read"
         })
         .promise()
     };

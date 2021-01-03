@@ -61,7 +61,8 @@ export class SolutionResolver {
   //@UseGuards(GqlAuthGuard)
   @Mutation(() => Attachment, { nullable: true })
   public async singleFileUpload(
-    @Args({ name: 'file', type: () => GraphQLUpload }) file 
+    @Args({ name: 'file', type: () => GraphQLUpload }) file ,
+    @Args({ name: 'solution_id'}) solution_id: String
   ) {
 
     const s3Uploader = new AWSS3Uploader({ 
@@ -71,8 +72,7 @@ export class SolutionResolver {
       region: "us-east-1"
     });
     
-    const attachment: Attachment = await this.attachmentService.saveAttachment(s3Uploader, file);
-    console.log(attachment);
+    const attachment: Attachment = await this.attachmentService.saveAttachment(solution_id, file, s3Uploader);
     return attachment;
   }
 }

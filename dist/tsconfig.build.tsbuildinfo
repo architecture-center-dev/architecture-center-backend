@@ -5797,7 +5797,7 @@
         "signature": "5dfc9cc2f3af055238785098f30224e52dda3f4b7856738700941e8c70268fb1"
       },
       "../src/solutions/infrastructure/persistence/s3/awss3uploader.ts": {
-        "version": "12101f9c6ce3df64e007c3e637dae3c6cb1efe8656eff3fda7ecba94a292284f",
+        "version": "68191baa6529f11c4b06cbd681f1f9a7933d23d83d1e359e3f2e35553dcd85e3",
         "signature": "a4a528a9d2020dc84ff762714ebbc682f35876c95f8666cd4dbf1fa9bcba7ec6"
       },
       "../node_modules/graphql-tools/utils/schemavisitor.d.ts": {
@@ -6137,12 +6137,12 @@
         "signature": "d7c490e4b288a6ba5c8763b22cf64b58e12a3ed528d6246bba078526ec83299c"
       },
       "../src/solutions/domain/services/attachment.service.ts": {
-        "version": "28abd8bad4698800aa1dcfd84a2df2b503a6212370e5de568d754b6459aa15cd",
-        "signature": "9712ae75e5fd065d3e3d52bcfad91841fb0eaf39a92655997c2606eed607f480"
+        "version": "2d3d9cde827aea7d700bda0fb1ed8754ad76769cfb0dcc56ce0c22122170a320",
+        "signature": "094300cac8524b035e061aee029d1e3f416ce4256c34d5970460b863810f8f85"
       },
       "../src/solutions/application/adapters/grapghql/resolvers/solution.resolver.ts": {
-        "version": "fc9553baa754047d64fbaf7133b554af3fc47608dee8a358d8320e44d47baa90",
-        "signature": "73fc13af87ae9a8d825d93d020933128007a1a0577eda84353e71e890a659aaa"
+        "version": "ba0419c582ec44faa8502d667c6bd8e9c173d5b109f7f31b9d6fe389d9235617",
+        "signature": "8f88b37fe859f41d1ec58d82de4183b3cfd1a173d1797085838e7625ac4b2cd3"
       },
       "../src/solutions/solutions.module.ts": {
         "version": "bfab4830f328b86076de3f2c5ede9cf8bdcbfad5e2b2a5b5199b5c4ab7c9408c",
@@ -22014,6 +22014,7 @@
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
         "../src/solutions/domain/entities/attachment.entity.ts",
+        "../src/solutions/domain/entities/solution.entity.ts",
         "../src/solutions/domain/services/iuploader.interface.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -37912,6 +37913,7 @@
       "../src/solutions/domain/services/attachment.service.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/solutions/domain/entities/attachment.entity.ts",
+        "../src/solutions/domain/entities/solution.entity.ts",
         "../src/solutions/domain/services/iuploader.interface.ts"
       ],
       "../src/solutions/application/adapters/grapghql/resolvers/solution.resolver.ts": [

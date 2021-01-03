@@ -61,7 +61,7 @@ type Mutation {
   login(password: String!, username: String!): OauthTOken!
   createTagSolution(tag: String!, solution_id: String!): Solution!
   createTeamMemberSolution(team_member: String!, solution_id: String!): Solution!
-  singleFileUpload(file: Upload!): Attachment
+  singleFileUpload(solution_id: String!, file: Upload!): Attachment
 }
 
 """The `Upload` scalar type represents a file upload."""
