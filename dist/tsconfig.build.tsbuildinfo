@@ -4576,13 +4576,25 @@
         "version": "8231cc981c30cd3a55a84239bea70ae7e29c02e20f2ad24615185a0cb53dbccf",
         "signature": "40a51847c3ee20278b63a6669df5f53ae1c31d72adbbcab95af944d38f30e43a"
       },
+      "../src/solutions/domain/entities/canvas.entity.ts": {
+        "version": "fab3d29366a263e0e4a0cbeec3fef22100b2ccbcb4a09c26a2047b07a82a61b9",
+        "signature": "8f8a92632717998a3c5b27d89a9cf3701871b5389d09cce2b20cb37e6cea9fb8"
+      },
+      "../src/solutions/domain/dto/create-canvas.dto.ts": {
+        "version": "a8d01e2ca35a5c5c60e2b802981bc9eb23d80f52bb086c0730ee390c54ec16cb",
+        "signature": "b6bcc0aa1395757edacb97ffcfcc45735d20a2c07820907626890de5ea5c77a8"
+      },
+      "../src/solutions/domain/services/canvas.service.ts": {
+        "version": "838ecc3be095b4d21da18f2b649078e71113c42f78a563b999b26a2cbf7f7ae4",
+        "signature": "32154930807a9b9c90ae86409cd662d27f7a94aa491542368cc0393acf60989d"
+      },
       "../src/solutions/domain/services/solutions.service.ts": {
-        "version": "2d349016a41a3c87d9d3c4bfd94bd06429e02dbbf0fc14ec6f82a7fb43797cc7",
-        "signature": "7f5d1a62ff15f964645138ed19075b4bb89b039e1b9a99c11f42170f3ca79170"
+        "version": "b7b85b73f788d92d1152691712d727e3810a95bbc1ed248bb20002c3a1e6d380",
+        "signature": "d5f1a3a3d74e8d0b3bebb9bf51e744706eb182d16eca53f77d114264d4b85ac6"
       },
       "../src/solutions/application/adapters/rest/solutions.controller.ts": {
         "version": "1e5aad4b232372a7c917ab43ce8e3cbdebff3bf505de8d2d274aef4265f2ba3d",
-        "signature": "17d6efa27ec5e9c14ad64cc5a5ae759197412954ac6bc5e1d2b05dda2d28bab2"
+        "signature": "3b98c74d07d72f2282617ca85f7f1322cfef583f44595fc4254dec0604ca2e6c"
       },
       "../node_modules/aws-sdk/lib/error.d.ts": {
         "version": "aee22a16add1c6362d3f37af8f779595330b223ed5dcdd612bc7e5ef473017a4",
@@ -6144,20 +6156,8 @@
         "version": "ba0419c582ec44faa8502d667c6bd8e9c173d5b109f7f31b9d6fe389d9235617",
         "signature": "8f88b37fe859f41d1ec58d82de4183b3cfd1a173d1797085838e7625ac4b2cd3"
       },
-      "../src/solutions/domain/entities/canvas.entity.ts": {
-        "version": "fab3d29366a263e0e4a0cbeec3fef22100b2ccbcb4a09c26a2047b07a82a61b9",
-        "signature": "8f8a92632717998a3c5b27d89a9cf3701871b5389d09cce2b20cb37e6cea9fb8"
-      },
-      "../src/solutions/domain/dto/create-canvas.dto.ts": {
-        "version": "a8d01e2ca35a5c5c60e2b802981bc9eb23d80f52bb086c0730ee390c54ec16cb",
-        "signature": "b6bcc0aa1395757edacb97ffcfcc45735d20a2c07820907626890de5ea5c77a8"
-      },
-      "../src/solutions/domain/services/canvas.service.ts": {
-        "version": "5f25fdfb6a5266edcc2af998308893d8e77eab7c97ca2e46e0f4414cc9fa6e1a",
-        "signature": "2e0cfe56ef5fdb43acaa2441c843fc871ce4a70a9debe41204991828200f0a7b"
-      },
       "../src/solutions/application/adapters/grapghql/resolvers/canvas.resolver.ts": {
-        "version": "ae1370ea48ba9d37f8ce8eddafbed3e6966f187ac4bced9efe6759b6a4db3d7f",
+        "version": "d1bc3d140914bcd9dd81ed97994b51a5edca5707fecc607dbbac6b0e8bf298fd",
         "signature": "c67716de0f06752e6a2769f9b9be71760b5be98acade2974574b813f63264b5f"
       },
       "../src/solutions/solutions.module.ts": {
@@ -17390,6 +17390,35 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/solutions/domain/entities/canvas.entity.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/solutions/domain/dto/create-canvas.dto.ts": [
+        "../node_modules/@nestjs/graphql/index.d.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../src/solutions/domain/services/canvas.service.ts": [
+        "../node_modules/@nestjs/common/index.d.ts",
+        "../node_modules/@nestjs/typeorm/index.d.ts",
+        "../node_modules/typeorm/index.d.ts",
+        "../src/solutions/domain/entities/canvas.entity.ts",
+        "../src/solutions/domain/dto/create-canvas.dto.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/graceful-fs/index.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/solutions/domain/services/solutions.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
@@ -17397,6 +17426,8 @@
         "../src/solutions/domain/dto/create-solution.dto.ts",
         "../src/solutions/domain/dto/update-solution.dto.ts",
         "../src/solutions/domain/entities/solution.entity.ts",
+        "../src/solutions/domain/services/canvas.service.ts",
+        "../src/solutions/domain/dto/create-canvas.dto.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -22049,35 +22080,6 @@
         "../src/solutions/domain/entities/attachment.entity.ts",
         "../src/solutions/domain/services/iuploader.interface.ts",
         "../src/solutions/domain/services/attachment.service.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/solutions/domain/entities/canvas.entity.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../node_modules/@nestjs/graphql/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/solutions/domain/dto/create-canvas.dto.ts": [
-        "../node_modules/@nestjs/graphql/index.d.ts",
-        "../node_modules/@types/node/fs.d.ts",
-        "../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../node_modules/@types/graceful-fs/index.d.ts",
-        "../node_modules/@types/node/util.d.ts",
-        "../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../src/solutions/domain/services/canvas.service.ts": [
-        "../node_modules/@nestjs/common/index.d.ts",
-        "../node_modules/@nestjs/typeorm/index.d.ts",
-        "../node_modules/typeorm/index.d.ts",
-        "../src/solutions/domain/entities/canvas.entity.ts",
-        "../src/solutions/domain/dto/create-canvas.dto.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/graceful-fs/index.d.ts",
@@ -33370,9 +33372,18 @@
       "../src/solutions/domain/entities/solution.entity.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
+      "../src/solutions/domain/entities/canvas.entity.ts": [
+        "../node_modules/typeorm/index.d.ts"
+      ],
+      "../src/solutions/domain/services/canvas.service.ts": [
+        "../node_modules/typeorm/index.d.ts",
+        "../src/solutions/domain/entities/canvas.entity.ts",
+        "../src/solutions/domain/dto/create-canvas.dto.ts"
+      ],
       "../src/solutions/domain/services/solutions.service.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/solutions/domain/entities/solution.entity.ts",
+        "../src/solutions/domain/services/canvas.service.ts",
         "../src/solutions/domain/dto/create-solution.dto.ts",
         "../src/solutions/domain/dto/update-solution.dto.ts"
       ],
@@ -37984,14 +37995,6 @@
         "../src/solutions/domain/entities/solution.entity.ts",
         "../src/solutions/domain/entities/attachment.entity.ts"
       ],
-      "../src/solutions/domain/entities/canvas.entity.ts": [
-        "../node_modules/typeorm/index.d.ts"
-      ],
-      "../src/solutions/domain/services/canvas.service.ts": [
-        "../node_modules/typeorm/index.d.ts",
-        "../src/solutions/domain/entities/canvas.entity.ts",
-        "../src/solutions/domain/dto/create-canvas.dto.ts"
-      ],
       "../src/solutions/application/adapters/grapghql/resolvers/canvas.resolver.ts": [
         "../src/solutions/domain/services/canvas.service.ts",
         "../src/solutions/domain/entities/canvas.entity.ts",
@@ -39520,7 +39523,9 @@
       "../node_modules/@nestjs/mapped-types/index.d.ts",
       "../src/solutions/domain/dto/update-solution.dto.ts",
       "../src/solutions/domain/entities/solution.entity.ts",
-      "../src/solutions/domain/services/solutions.service.ts",
+      "../src/solutions/domain/entities/canvas.entity.ts",
+      "../src/solutions/domain/dto/create-canvas.dto.ts",
+      "../src/solutions/domain/services/canvas.service.ts",
       "../src/solutions/application/adapters/rest/solutions.controller.ts",
       "../node_modules/aws-sdk/lib/error.d.ts",
       "../node_modules/aws-sdk/lib/credentials.d.ts",
@@ -39912,9 +39917,7 @@
       "../src/solutions/domain/entities/attachment.entity.ts",
       "../src/solutions/domain/services/attachment.service.ts",
       "../src/solutions/application/adapters/grapghql/resolvers/solution.resolver.ts",
-      "../src/solutions/domain/entities/canvas.entity.ts",
-      "../src/solutions/domain/dto/create-canvas.dto.ts",
-      "../src/solutions/domain/services/canvas.service.ts",
+      "../src/solutions/application/adapters/grapghql/resolvers/canvas.resolver.ts",
       "../src/solutions/solutions.module.ts",
       "../src/app.module.ts",
       "../src/cluster.service.ts",
@@ -39967,7 +39970,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/solutions/application/adapters/grapghql/resolvers/canvas.resolver.ts"
+      "../src/solutions/domain/services/solutions.service.ts"
     ]
   },
   "version": "3.8.3"

@@ -5,6 +5,8 @@ import { CreateSolutionDto } from '../dto/create-solution.dto';
 import { UpdateSolutionDto } from '../dto/update-solution.dto';
 import { Solution } from '../entities/solution.entity';
 import {ObjectID} from 'mongodb'
+import { CanvasService } from './canvas.service';
+import { CreateCanvasDto } from '../dto/create-canvas.dto';
 
 @Injectable()
 export class SolutionsService {
@@ -12,10 +14,28 @@ export class SolutionsService {
   constructor(
     @InjectRepository(Solution)
     private userRepository: Repository<Solution>,
+    private canvasService: CanvasService
   ) { }
 
-  create(createSolutionDto: CreateSolutionDto) {
-    return this.userRepository.save(createSolutionDto);
+  async create(createSolutionDto: CreateSolutionDto) {
+    const solution : Solution = await this.userRepository.save(createSolutionDto);
+
+    const canvas : CreateCanvasDto = {
+      solution_id: solution.solution_id.toString(),
+      dependencies: null,
+      technology: null,
+      patterns: null,
+      problem: null,
+      func_requirement: null,
+      non_func_requirement: null,
+      context: null,
+      difficulties: null,
+      advantages: null
+    }
+
+    await this.canvasService.create(canvas);
+
+    return solution;
   }
 
   findAll(filter:String) {

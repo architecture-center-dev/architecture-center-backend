@@ -41,16 +41,6 @@ A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date
 """
 scalar DateTime
 
-type Attachment {
-  attachment_id: String!
-  url: String!
-  filename: String!
-  encoding: String!
-  mimetype: String!
-  created_at: DateTime!
-  updated_at: DateTime!
-}
-
 type Canvas {
   canvas_id: String!
   solution_id: String!
@@ -63,6 +53,16 @@ type Canvas {
   context: [String!]
   difficulties: [String!]
   advantages: [String!]
+  created_at: DateTime!
+  updated_at: DateTime!
+}
+
+type Attachment {
+  attachment_id: String!
+  url: String!
+  filename: String!
+  encoding: String!
+  mimetype: String!
   created_at: DateTime!
   updated_at: DateTime!
 }

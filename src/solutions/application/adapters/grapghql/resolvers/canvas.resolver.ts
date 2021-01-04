@@ -38,11 +38,8 @@ export class CanvasResolver {
     @Args({ name: 'value' }) value: string,
   ) {
 
-    const result: Canvas = await this.canvasService.createItemCanvas(null);
+    const result: Canvas = await this.canvasService.createItemCanvas(canvas_id, value, item);
     
     return result;
   }
-
-
-
 }
