@@ -28,7 +28,7 @@ let AuthResolver = class AuthResolver {
     }
 };
 __decorate([
-    graphql_1.Mutation(returns => oauth_token_type_1.OauthTOken),
+    graphql_1.Mutation(returns => oauth_token_type_1.OauthTOken, { nullable: true }),
     __param(0, graphql_1.Args({ name: 'username' })),
     __param(1, graphql_1.Args({ name: 'password' })),
     __metadata("design:type", Function),

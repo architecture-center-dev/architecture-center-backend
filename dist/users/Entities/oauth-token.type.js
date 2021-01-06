@@ -16,7 +16,7 @@ let OauthTOken = class OauthTOken {
     }
 };
 __decorate([
-    graphql_1.Field(),
+    graphql_1.Field({ nullable: true }),
     __metadata("design:type", String)
 ], OauthTOken.prototype, "accessToken", void 0);
 OauthTOken = __decorate([

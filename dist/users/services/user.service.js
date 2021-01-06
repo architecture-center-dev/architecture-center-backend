@@ -44,6 +44,7 @@ let UserService = class UserService {
         const user = await this.userRepository.findOne({ where: { email } });
         const bcrypt = require('bcrypt');
         const isPasswordMatching = bcrypt.compareSync(password, user.password);
+        console.log("isPasswordMatching", isPasswordMatching);
         return isPasswordMatching ? user : null;
     }
     async remove(id) {

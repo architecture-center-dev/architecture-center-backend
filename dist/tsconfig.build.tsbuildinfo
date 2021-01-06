@@ -4333,7 +4333,7 @@
         "signature": "12fdda148bf78f222def3132d341d7aa3e15586f953302180b0c1e56f270f297"
       },
       "../src/users/services/user.service.ts": {
-        "version": "65455b53688faa4d941032af07aba206b6f126d6b280a15c78b78ce8ae510b78",
+        "version": "d8f9df2599b3abffb02068b8c19c0da9e80fc8ac3248261c6ddeae4240c9927b",
         "signature": "c8b6cc41f99b5866e8c0235f20e686e68c11ff6d8f35fe4e92f63a1fccfe37ff"
       },
       "../node_modules/@nestjs/passport/dist/abstract.strategy.d.ts": {
@@ -4437,7 +4437,7 @@
         "signature": "2b8c63b2963cae3e2b9eb1b8a0eb396612b8ba0ab407abcb44a9e4835962c61e"
       },
       "../src/auth/services/auth.service.ts": {
-        "version": "ce4747fb3e422a06b19dde2d5516b74bf4435d9d8b992f4ee52cac8c4e9d7cb8",
+        "version": "49c10abd7ff99250d30405c7fad03918e637cfa2c8eaabab626202359437953b",
         "signature": "0f7371299148307b22ebc9e2c5e6c7c30faaa6103097d107135fef1232b0e2a5"
       },
       "../node_modules/@types/passport-strategy/index.d.ts": {
@@ -4477,11 +4477,11 @@
         "signature": "fce534d1517e23d350b62d5a0cf7cd6f4acaca226091552bb8f58f99586297ba"
       },
       "../src/users/entities/oauth-token.type.ts": {
-        "version": "e102c2771e030f65c87b90499b6a158d2cd5ee95681d3a8f22e62d32bbcc671a",
+        "version": "533c79d92de3d51bc47dc3a2d01099bc89bf0d21bff1ace8b61be7818024780c",
         "signature": "af31c5dc4a7f1dc52e6050b6c4a15f9e84c8c0fae6a6a7d094d5e675d1c24c32"
       },
       "../src/auth/resolvers/auth.resolver.ts": {
-        "version": "70254163b1056ac87638c8ea6c3a9dadca4e815ada6ba5e39178b5beaa8d85be",
+        "version": "a85aea0d791a5f4d9c1d1c3aed559eec3f52f815ed3b442013343571b2b27297",
         "signature": "5b738e7112809f5a9ca9fa49d72e0f3c1ee751ab61cae68fd373561fbb78e666"
       },
       "../src/auth/auth.module.ts": {
@@ -39488,7 +39488,6 @@
       "../node_modules/@nestjs/jwt/dist/index.d.ts",
       "../node_modules/@nestjs/jwt/index.d.ts",
       "../src/auth/dto/user.dto.ts",
-      "../src/auth/services/auth.service.ts",
       "../node_modules/@types/passport-strategy/index.d.ts",
       "../node_modules/@types/passport-local/index.d.ts",
       "../src/auth/strategies/local.strategy.ts",
@@ -39526,6 +39525,7 @@
       "../src/solutions/domain/entities/canvas.entity.ts",
       "../src/solutions/domain/dto/create-canvas.dto.ts",
       "../src/solutions/domain/services/canvas.service.ts",
+      "../src/solutions/domain/services/solutions.service.ts",
       "../src/solutions/application/adapters/rest/solutions.controller.ts",
       "../node_modules/aws-sdk/lib/error.d.ts",
       "../node_modules/aws-sdk/lib/credentials.d.ts",
@@ -39970,7 +39970,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/solutions/domain/services/solutions.service.ts"
+      "../src/auth/services/auth.service.ts"
     ]
   },
   "version": "3.8.3"

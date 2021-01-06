@@ -47,6 +47,8 @@ export class UserService {
 
     const isPasswordMatching = bcrypt.compareSync(password, user.password);
 
+    console.log("isPasswordMatching",isPasswordMatching);
+
     return isPasswordMatching ? user : null;
   }
 

@@ -6,7 +6,7 @@ import { AuthService } from '../services/auth.service';
 export class AuthResolver {
   constructor(private authService: AuthService) { }
 
-  @Mutation(returns => OauthTOken)
+  @Mutation(returns => OauthTOken, {nullable:true})
   public async login(
     @Args({ name: 'username' }) username: string,
     @Args({ name: 'password' }) password: string

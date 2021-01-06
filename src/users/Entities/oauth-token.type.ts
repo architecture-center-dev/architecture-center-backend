@@ -3,7 +3,7 @@ import { ObjectType, Field } from "@nestjs/graphql";
 @ObjectType()
 export class OauthTOken {
 
-    @Field()
+    @Field({nullable:true})
     public accessToken: string;
 
     constructor(accessToken?: string) {
