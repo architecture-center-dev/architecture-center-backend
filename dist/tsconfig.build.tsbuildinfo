@@ -6153,11 +6153,11 @@
         "signature": "094300cac8524b035e061aee029d1e3f416ce4256c34d5970460b863810f8f85"
       },
       "../src/solutions/application/adapters/grapghql/resolvers/solution.resolver.ts": {
-        "version": "ba0419c582ec44faa8502d667c6bd8e9c173d5b109f7f31b9d6fe389d9235617",
+        "version": "ca1b3a4cd3433235abc667a110b6fb3af6e42599a63e6b0c4a5bdd385b18c637",
         "signature": "8f88b37fe859f41d1ec58d82de4183b3cfd1a173d1797085838e7625ac4b2cd3"
       },
       "../src/solutions/application/adapters/grapghql/resolvers/canvas.resolver.ts": {
-        "version": "d1bc3d140914bcd9dd81ed97994b51a5edca5707fecc607dbbac6b0e8bf298fd",
+        "version": "183b2248f93fb4dfac9ec88e91495be61dd76081e863407893d729aaf1444d6b",
         "signature": "c67716de0f06752e6a2769f9b9be71760b5be98acade2974574b813f63264b5f"
       },
       "../src/solutions/solutions.module.ts": {
@@ -22078,7 +22078,6 @@
         "../src/solutions/infrastructure/persistence/s3/awss3uploader.ts",
         "../node_modules/graphql-tools/index.d.ts",
         "../src/solutions/domain/entities/attachment.entity.ts",
-        "../src/solutions/domain/services/iuploader.interface.ts",
         "../src/solutions/domain/services/attachment.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -39488,6 +39487,7 @@
       "../node_modules/@nestjs/jwt/dist/index.d.ts",
       "../node_modules/@nestjs/jwt/index.d.ts",
       "../src/auth/dto/user.dto.ts",
+      "../src/auth/services/auth.service.ts",
       "../node_modules/@types/passport-strategy/index.d.ts",
       "../node_modules/@types/passport-local/index.d.ts",
       "../src/auth/strategies/local.strategy.ts",
@@ -39916,9 +39916,7 @@
       "../node_modules/graphql-tools/index.d.ts",
       "../src/solutions/domain/entities/attachment.entity.ts",
       "../src/solutions/domain/services/attachment.service.ts",
-      "../src/solutions/application/adapters/grapghql/resolvers/solution.resolver.ts",
       "../src/solutions/application/adapters/grapghql/resolvers/canvas.resolver.ts",
-      "../src/solutions/solutions.module.ts",
       "../src/app.module.ts",
       "../src/cluster.service.ts",
       "../src/main.ts",
@@ -39970,7 +39968,8 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/auth/services/auth.service.ts"
+      "../src/solutions/application/adapters/grapghql/resolvers/solution.resolver.ts",
+      "../src/solutions/solutions.module.ts"
     ]
   },
   "version": "3.8.3"

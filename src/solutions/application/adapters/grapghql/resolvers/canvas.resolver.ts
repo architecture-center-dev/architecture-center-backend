@@ -11,7 +11,7 @@ export class CanvasResolver {
     private canvasService: CanvasService
   ) { }
 
-  //@UseGuards(GqlAuthGuard)
+  @UseGuards(GqlAuthGuard)
   @Query(returns => Canvas, {nullable : true})
   public async canvasBySolutionId(@Args({ name: 'solution_id' }) solution_id: string) {
 
@@ -20,7 +20,7 @@ export class CanvasResolver {
     return canvas;
   }
 
-  //@UseGuards(GqlAuthGuard)
+  @UseGuards(GqlAuthGuard)
   @Mutation(returns => Canvas)
   public async createCanvas(
     @Args({ name: 'canvas', type: () => CreateCanvasDto}) canvas: CreateCanvasDto
@@ -30,7 +30,7 @@ export class CanvasResolver {
     return canvasSaved;
   }
   
-  //@UseGuards(GqlAuthGuard)
+  @UseGuards(GqlAuthGuard)
   @Mutation(returns => Canvas)
   public async createItemCanvas(
     @Args({ name: 'canvas_id' }) canvas_id: string,

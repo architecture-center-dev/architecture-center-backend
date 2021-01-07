@@ -7,7 +7,6 @@ import {ObjectId} from "mongodb"
 import {AWSS3Uploader} from "../../../../infrastructure/persistence/s3/AWSS3Uploader"
 import { GraphQLUpload } from 'graphql-tools';
 import { Attachment } from '../../../../domain/entities/attachment.entity';
-import { File } from 'src/solutions/domain/services/IUploader.interface';
 import { AttachmentService } from 'src/solutions/domain/services/attachment.service';
 
 @Resolver('Solutions')
@@ -16,7 +15,7 @@ export class SolutionResolver {
     private solutionService: SolutionsService, private attachmentService: AttachmentService
   ) { }
 
-  //@UseGuards(GqlAuthGuard)
+  @UseGuards(GqlAuthGuard)
   @Query(returns => [Solution])
   public async solution(@Args({ name: 'search',nullable: true }) search: string) {
     
@@ -25,7 +24,7 @@ export class SolutionResolver {
     return solutions;
   }
   
-  //@UseGuards(GqlAuthGuard)
+  @UseGuards(GqlAuthGuard)
   @Query(returns => Solution, {nullable : true})
   public async solutionById(@Args({ name: 'solution_id' }) solution_id: string) {
 
@@ -34,7 +33,7 @@ export class SolutionResolver {
     return solution;
   }
 
-  //@UseGuards(GqlAuthGuard)
+  @UseGuards(GqlAuthGuard)
   @Mutation(returns => Solution)
   public async createTagSolution(
     @Args({ name: 'solution_id' }) solution_id: string,
@@ -46,7 +45,7 @@ export class SolutionResolver {
     return result;
   }
   
-  //@UseGuards(GqlAuthGuard)
+  @UseGuards(GqlAuthGuard)
   @Mutation(returns => Solution)
   public async createTeamMemberSolution(
     @Args({ name: 'solution_id' }) solution_id: string,
@@ -58,7 +57,7 @@ export class SolutionResolver {
     return result;
   }
   
-  //@UseGuards(GqlAuthGuard)
+  @UseGuards(GqlAuthGuard)
   @Mutation(() => Attachment, { nullable: true })
   public async singleFileUpload(
     @Args({ name: 'file', type: () => GraphQLUpload }) file ,
