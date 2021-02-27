@@ -1,20 +1,35 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { SolutionsController } from './solutions.controller';
 import { SolutionsService } from '../../../domain/services/solutions.service';
+import { Solution } from '../../../domain/entities/solution.entity';
+import { getRepositoryToken } from '@nestjs/typeorm';
+import { CanvasService } from '../../../domain/services/canvas.service';
+import { Canvas } from '../../../domain/entities/canvas.entity';
 
 describe('SolutionsController', () => {
-  let controller: SolutionsController;
+  let solutionsController: SolutionsController;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [SolutionsController],
-      providers: [SolutionsService],
+      providers: [
+        SolutionsService,
+        CanvasService,
+        {
+          provide: getRepositoryToken(Solution),
+          useValue: {}
+        },
+        {
+          provide: getRepositoryToken(Canvas),
+          useValue: {}
+        }
+      ],
     }).compile();
 
-    controller = module.get<SolutionsController>(SolutionsController);
+    solutionsController = module.get<SolutionsController>(SolutionsController);
   });
 
   it('should be defined', () => {
-    expect(controller).toBeDefined();
+    expect(solutionsController).toBeDefined();
   });
 });
