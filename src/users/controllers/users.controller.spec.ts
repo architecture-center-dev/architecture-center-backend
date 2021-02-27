@@ -1,24 +1,32 @@
 import { Test, TestingModule } from "@nestjs/testing";
-import {UsersController} from "./users.controller"
-import {UserService} from "../services/user.service"
-import {User} from '../Entities/user.entity';
+import { UsersController } from "./users.controller"
+import { UserService } from "../services/user.service"
+import { User } from '../Entities/user.entity';
 
-describe("-- Client Controller --", () => {
- let userController: UsersController;
+describe("UsersController", () => {
+   let userController: UsersController;
 
- afterEach(() => {
-    jest.resetAllMocks();
- });
+   beforeEach(async () => {
+      const module: TestingModule = await Test.createTestingModule({
+         providers: [
+            UsersController,
+            {
+               provide: UserService,
+               useValue: {
+                  findAll : () => [new User()]
+               }
+            }
+         ],
 
- it('test service', () => {
-  const users: User[] = new Array<User>();
+      }).compile();
 
-  userController = new UsersController();
-  const expectedResult = users;
-  jest.spyOn(userController, "posts").mockResolvedValue(expectedResult);
+      userController = module.get<UsersController>(UsersController);
+   });
 
-  expect(userController.posts()).toBe(expectedResult);
+   it('call getUsers shoul be return a list of users', async () => {
+      const users: User[] = await userController.getUsers()
 
- });
+      expect(users).toEqual([new User()]);
+   });
 
 });
