@@ -1,4 +1,4 @@
-# Architecture center front-end
+# Architecture center backend-end
 
 Open source tool to be a knowledge base for architectural solutions.
 
