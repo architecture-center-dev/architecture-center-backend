@@ -1,0 +1,14 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: architecture-center-ms
+  namespace: architecture-center-dev
+spec:
+  gateways:
+    - architecture-center-ms
+  hosts:
+    - "api.ac.io"
+  http:
+  - route:
+    - destination:
+        host: architecture-center-ms

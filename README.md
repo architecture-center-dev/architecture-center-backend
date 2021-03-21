@@ -39,3 +39,10 @@ yarn start
 * Search of the sollutions
 * Solution details
 * **Architecture Canvas** - Visual tool to give a shared vision of architectural solutions
+
+## todo
+ - Add application insights
+ - Add cosmos DB MongoAPI
+ - Configure Cosmos DB via Azure key vault
+ - Publish via webapp service
+ - Expose via api gateway
