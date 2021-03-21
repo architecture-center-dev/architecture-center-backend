@@ -2,3 +2,4 @@ node_modules
 dist
 documentation
 coverage
+.env
