@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: architecture-center-ms
+  name: architecture-center-backend-ms
   namespace: architecture-center-dev
   labels:
-    app: architecture-center-ms
+    app: architecture-center-backend-ms
     version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: architecture-center-ms
+      app: architecture-center-backend-ms
       version: v1
   template:
     metadata:
       labels:
-        app: architecture-center-ms
+        app: architecture-center-backend-ms
         version: v1
     spec:
       containers:
-      - name: architecture-center-ms
-        image: ms.io:5000/architecture-center:1.0
+      - name: architecture-center-backend-ms
+        image: ms.io:5000/architecture-center/backend:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80
@@ -35,10 +35,10 @@ spec:
 #           port: 8989
 #         initialDelaySeconds: 3
 #         periodSeconds: 3
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "1"
-          limits:
-            memory: "256Mi"
-            cpu: "1"
+#        resources:
+#          requests:
+#            memory: "256Mi"
+#            cpu: "1"
+#          limits:
+#            memory: "256Mi"
+#            cpu: "1"

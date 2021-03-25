@@ -5,10 +5,10 @@ metadata:
   namespace: architecture-center-dev
 spec:
   gateways:
-    - architecture-center-ms
+    - architecture-center-backend-ms
   hosts:
     - "api.ac.io"
   http:
   - route:
     - destination:
-        host: architecture-center-ms
+        host: architecture-center-backend-ms
