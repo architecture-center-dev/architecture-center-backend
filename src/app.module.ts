@@ -9,6 +9,8 @@ import { SolutionsModule } from './solutions/solutions.module';
 import { Solution } from './solutions/domain/entities/solution.entity';
 import { Attachment } from './solutions/domain/entities/attachment.entity';
 import { Canvas } from './solutions/domain/entities/canvas.entity';
+import { TerminusModule } from '@nestjs/terminus';
+import { HealthController } from './health/health.controller';
 
 @Module({
   imports: [
@@ -31,9 +33,10 @@ import { Canvas } from './solutions/domain/entities/canvas.entity';
     }),
     UsersModule,
     AuthModule,
-    SolutionsModule
+    SolutionsModule,
+    TerminusModule
   ],
-  controllers: [],
+  controllers: [HealthController],
   providers: [],
 })
 export class AppModule { }

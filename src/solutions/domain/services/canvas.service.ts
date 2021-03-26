@@ -1,16 +1,16 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
 import { Canvas } from '../entities/canvas.entity';
 import { CreateCanvasDto } from '../dto/create-canvas.dto';
 import {ObjectID} from "mongodb"
+import { CanvasRepository } from '../respositories/canvas.repository';
 
 @Injectable()
 export class CanvasService {
 
   constructor(
     @InjectRepository(Canvas)
-    private canvasRepository: Repository<Canvas>,
+    private canvasRepository: CanvasRepository,
   ) { }
 
   async createItemCanvas(canvas_id: String, value: String, item: String) {
