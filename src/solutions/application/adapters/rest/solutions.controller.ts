@@ -38,7 +38,7 @@ export class SolutionsController {
     return this.solutionsService.createTeamMember(solution_id, (request as any).team_member);
   }
 
-  @UseGuards(JwtAuthGuard)
+  //@UseGuards(JwtAuthGuard)
   @Get()
   @ApiOkResponse({ type: [Solution] })
   @ApiOperation({ description: "List all solutions", summary: "List all solutions" })
@@ -61,5 +61,12 @@ export class SolutionsController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.solutionsService.remove(+id);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('/:solution_id/big-picture')
+  uploadBigPicture(@Param('solution_id') solution_id: string, @Body() request: Object) {
+
+    return this.solutionsService.createTeamMember(solution_id, (request as any).team_member);
   }
 }
