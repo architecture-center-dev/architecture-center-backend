@@ -13,7 +13,10 @@ export class AuthController {
   @Post('oauth2/token')
   @HttpCode(HttpStatus.OK)
   async login(@Request() req) {
-    return this.authService.login(req.user);
+    return this.authService.login({
+      username: req.user.email,
+      password: req.body.password
+    });
   }
 
   @UseGuards(JwtAuthGuard)

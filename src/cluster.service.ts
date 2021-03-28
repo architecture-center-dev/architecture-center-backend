@@ -8,8 +8,6 @@ const numCPUs = os.cpus().length;
 export default class ClusterService {
     static clusterize(callback: Function): void {
         if (cluster.isMaster) {
-            console.log(`MASTER SERVER (${process.pid}) IS RUNNING `);
-
             for (let i = 0; i < numCPUs; i++) {
                 cluster.fork();
             }
