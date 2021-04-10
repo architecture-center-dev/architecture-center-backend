@@ -38,7 +38,7 @@ export class SolutionsController {
     return this.solutionsService.createTeamMember(solution_id, (request as any).team_member);
   }
 
-  //@UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   @Get()
   @ApiOkResponse({ type: [Solution] })
   @ApiOperation({ description: "List all solutions", summary: "List all solutions" })

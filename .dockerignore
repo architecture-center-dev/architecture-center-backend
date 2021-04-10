@@ -2,5 +2,4 @@ test
 coverage
 docker
 node_modules
-src
 kubernetes

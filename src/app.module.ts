@@ -17,11 +17,13 @@ import { HealthController } from './health/health.controller';
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: process.env.DRIVER_DB as any,
-      host: process.env.HOST_DB,
-      port: process.env.PORT_DB as any,
+      //host: process.env.HOST_DB,
+      //port: process.env.PORT_DB as any,
+      url: process.env.URL_DB as any,
       database: process.env.DATABASE,
       entities: [User, Solution, Attachment, Canvas],
       logging: true,
+      useUnifiedTopology: true
     }),
     GraphQLModule.forRoot({
       autoSchemaFile: 'src/schema/schema.gql',
