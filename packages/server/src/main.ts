@@ -6,8 +6,6 @@ import * as compression from 'compression';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 let appInsights = require("applicationinsights");
 
-
-
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors();
