@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: architecture-center-backend-ms
-  namespace: architecture-center-dev
+  namespace: architecture-center-api-dev
   labels:
     app: architecture-center-backend-ms
     version: v1
@@ -20,10 +20,19 @@ spec:
     spec:
       containers:
       - name: architecture-center-backend-ms
-        image: ms.io:5000/architecture-center/backend:1.0
+        image: ms.io:5000/architecture-center/backend:1.0.2
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+        volumeMounts:
+          - mountPath: /usr/src/app/.env
+            name: env
+            subPath: .env
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: app-params
+        name: env
 #       livenessProbe:
 #         httpGet:
 #           path: /actuator/health

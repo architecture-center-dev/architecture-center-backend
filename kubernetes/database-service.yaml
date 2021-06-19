@@ -1,0 +1,40 @@
+kind: "Service"
+apiVersion: "v1"
+metadata:
+  name: "mongo"
+  namespace: "architecture-center-api-dev"
+spec:
+  ports:
+    -
+      name: "mongo"
+      protocol: TCP
+      port: 27017
+      targetPort: 27017
+---
+kind: "Endpoints"
+apiVersion: "v1"
+metadata:
+  name: "mongo"
+  namespace: "architecture-center-api-dev"
+subsets:
+  -
+    addresses:
+      -
+        ip: "192.168.1.4"
+    ports:
+      -
+        port: 27017
+        name: "mongo"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: mongo
+  namespace: architecture-center-api-dev
+spec:
+  hosts:
+    - mongo
+  http:
+  - route:
+    - destination:
+        host: mongo

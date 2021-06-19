@@ -1,0 +1,17 @@
+apiVersion: v1
+data:
+  .env: |
+    DRIVER_DB='mongodb'
+    HOST_DB='mongo'
+    URL_DB='mongodb://architecture-center-db:2wCkDYC9bDjZjVDrPvBPpASmcV3hPZz1dt9q22KuL8aDZatAGpnNlQruXIz4JXRSaGAgKeNYPxYjpgOGmmu0jQ==@architecture-center-db.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@architecture-center-db@'
+    PORT_DB=27017
+    DATABASE='wipkanban'
+
+    AWS_ACCESS_KEY='AKIATVBU2QNIGAG7XC4L'
+    AWS_SECRET_ACCESS_KEY='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'
+
+    INSTRUMENTATION_KEY='87b40a49-2bc5-476f-9de6-cec2cd83519f'
+kind: ConfigMap
+metadata:
+  name: app-params
+  namespace: architecture-center-api-dev
