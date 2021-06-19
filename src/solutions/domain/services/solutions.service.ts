@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { getRepository, Repository } from 'typeorm';
-import { CreateSolutionDto } from '../dto/create-solution.dto';
-import { UpdateSolutionDto } from '../dto/update-solution.dto';
+import { CreateSolutionDto } from '../../application/dto/create-solution.dto';
+import { UpdateSolutionDto } from '../../application/dto/update-solution.dto';
 import { Solution } from '../entities/solution.entity';
 import {ObjectID} from 'mongodb'
 import { CanvasService } from './canvas.service';
-import { CreateCanvasDto } from '../dto/create-canvas.dto';
+import { CreateCanvasDto } from '../../application/dto/create-canvas.dto';
 
 @Injectable()
 export class SolutionsService {

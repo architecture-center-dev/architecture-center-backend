@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Canvas } from '../entities/canvas.entity';
-import { CreateCanvasDto } from '../dto/create-canvas.dto';
+import { CreateCanvasDto } from '../../application/dto/create-canvas.dto';
 import {ObjectID} from "mongodb"
 import { CanvasRepository } from '../respositories/canvas.repository';
 

@@ -3,7 +3,7 @@ import { UseGuards } from '@nestjs/common';
 import { GqlAuthGuard } from 'src/auth/guards/gql.auth.guard';
 import { CanvasService } from 'src/solutions/domain/services/canvas.service';
 import { Canvas } from 'src/solutions/domain/entities/canvas.entity';
-import { CreateCanvasDto } from 'src/solutions/domain/dto/create-canvas.dto';
+import { CreateCanvasDto } from 'src/solutions/application/dto/create-canvas.dto';
 
 @Resolver('canvas')
 export class CanvasResolver {

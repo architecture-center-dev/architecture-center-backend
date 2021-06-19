@@ -1,7 +1,7 @@
 import { Controller, Get, Post, Body, Put, Param, Delete, Query, UseGuards } from '@nestjs/common';
 import { SolutionsService } from '../../../domain/services/solutions.service';
-import { CreateSolutionDto } from '../../../domain/dto/create-solution.dto';
-import { UpdateSolutionDto } from '../../../domain/dto/update-solution.dto';
+import { CreateSolutionDto } from '../../dto/create-solution.dto';
+import { UpdateSolutionDto } from '../../dto/update-solution.dto';
 import { JwtAuthGuard } from '../../../../auth/guards/jwt-auth.guard';
 import { ApiCreatedResponse, ApiOkResponse, ApiOperation, ApiTags, ApiUnauthorizedResponse } from '@nestjs/swagger';
 import { Solution } from 'src/solutions/domain/entities/solution.entity';

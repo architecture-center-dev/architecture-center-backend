@@ -3,7 +3,7 @@ import { Solution } from '../entities/solution.entity';
 import { SolutionsService } from './solutions.service';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { CanvasService } from './canvas.service';
-import { CreateSolutionDto } from '../dto/create-solution.dto';
+import { CreateSolutionDto } from '../../application/dto/create-solution.dto';
 import { ObjectID } from 'mongodb';
 import { Canvas } from '../entities/canvas.entity';
 

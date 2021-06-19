@@ -1,4 +1,4 @@
-import { Controller, Request, Post, UseGuards, Get, Body, Param, HttpException, HttpStatus, HttpCode } from '@nestjs/common';
+import { Controller, Request, Post, UseGuards, Get, Body, Param, HttpException, HttpStatus, HttpCode, Redirect } from '@nestjs/common';
 import { AuthService } from '../services/auth.service';
 import { LocalAuthGuard } from '../guards/local-auth.guard';
 import { JwtAuthGuard } from '../guards/jwt-auth.guard';
@@ -37,5 +37,11 @@ export class AuthController {
 
     return result;
 
+  }
+
+  @Get('test')
+  @Redirect('https://nestjs.com', 301)
+  test(@Request() req) {
+    return 'teste';
   }
 }
