@@ -1,7 +1,6 @@
 import { Controller, Request, Post, UseGuards, Get, Body, Param, HttpException, HttpStatus, HttpCode, Redirect } from '@nestjs/common';
 import { AuthService } from '../services/auth.service';
 import { LocalAuthGuard } from '../guards/local-auth.guard';
-import { JwtAuthGuard } from '../guards/jwt-auth.guard';
 import { UserDto } from '../dto/user.dto';
 import { User } from 'src/users/Entities/user.entity';
 
@@ -19,12 +18,6 @@ export class AuthController {
     });
   }
 
-  @UseGuards(JwtAuthGuard)
-  @Get('profile')
-  getProfile(@Request() req) {
-    return req.user;
-  }
-
   @Post('auth/register')
   @HttpCode(HttpStatus.CREATED)
   async registerUser(@Body() userDto: UserDto) {
@@ -37,11 +30,5 @@ export class AuthController {
 
     return result;
 
-  }
-
-  @Get('test')
-  @Redirect('https://nestjs.com', 301)
-  test(@Request() req) {
-    return 'teste';
   }
 }
