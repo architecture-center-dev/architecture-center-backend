@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "0b50e16a-42b9-49ba-9f68-dc7850a36f0f",
+		"name": "Architecture center",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Solution",
+			"item": [
+				{
+					"name": "Create solution",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"E-commerce checkout\",\n    \"customer\":\"SMPS\",\n    \"project\":\"Ecommerce - Digital payments\",\n    \"market\":\"Financial\",\n    \"year_month\":\"2020/10\",\n    \"description\":\"Projeto de checkout via API\",\n    \"tags\":[\"checkout\", \"frontend\"],\n    \"team_members\":[\"ROberto Picanço\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/solutions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"solutions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Solutions",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/solutions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"solutions"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "financial",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Tag",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tags\":\"api rest\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/solutions/5fedcdfa0066af2e524b5262/tags?tags=api rest",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"solutions",
+								"5fedcdfa0066af2e524b5262",
+								"tags"
+							],
+							"query": [
+								{
+									"key": "tags",
+									"value": "api rest"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Team member",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"team_member\": \"Leandro Angelim\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/solutions/5fedcdfa0066af2e524b5262/team-members",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"solutions",
+								"5fedcdfa0066af2e524b5262",
+								"team-members"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload big picture",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/solutions/5ff2f42a65717ab006ce4577/big-picture",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"solutions",
+								"5ff2f42a65717ab006ce4577",
+								"big-picture"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"robisson@robissonoliveira.com.br\",\n    \"password\": \"12345\",\n    \"confirmPassword\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login with access token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"let dataApi = JSON.parse(responseBody);",
+							"pm.environment.set(\"access_token\", dataApi.access_token);",
+							"",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"robisson@robissonoliveira.com.br\",\n    \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/oauth2/token",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"oauth2",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
