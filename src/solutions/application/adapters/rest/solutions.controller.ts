@@ -2,9 +2,9 @@ import { Controller, Get, Post, Body, Put, Param, Delete, Query, UseGuards } fro
 import { SolutionsService } from '../../../domain/services/solutions.service';
 import { CreateSolutionDto } from '../../dto/create-solution.dto';
 import { UpdateSolutionDto } from '../../dto/update-solution.dto';
-import { JwtAuthGuard } from '../../../../auth/guards/jwt-auth.guard';
 import { ApiCreatedResponse, ApiOkResponse, ApiOperation, ApiTags, ApiUnauthorizedResponse } from '@nestjs/swagger';
 import { Solution } from 'src/solutions/domain/entities/solution.entity';
+import { JwtAuthGuard } from 'src/auth/application/adapters/graphql/guards/jwt-auth.guard';
 
 @ApiTags("Solutions")
 @Controller('solutions')

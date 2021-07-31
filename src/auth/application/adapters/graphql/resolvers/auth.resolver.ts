@@ -1,6 +1,8 @@
 import { Resolver, Mutation, Args } from '@nestjs/graphql';
-import { OauthTOken } from '../../users/Entities/oauth-token.type';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from 'src/auth/domain/services/auth.service';
+import { OauthTOken } from 'src/users/Entities/oauth-token.type';
+
+
 
 @Resolver('Auth')
 export class AuthResolver {

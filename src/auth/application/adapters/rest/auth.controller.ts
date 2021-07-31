@@ -1,7 +1,7 @@
 import { Controller, Request, Post, UseGuards, Get, Body, Param, HttpException, HttpStatus, HttpCode, Redirect } from '@nestjs/common';
-import { AuthService } from '../services/auth.service';
-import { LocalAuthGuard } from '../guards/local-auth.guard';
-import { UserDto } from '../dto/user.dto';
+import { AuthService } from '../../../domain/services/auth.service';
+import { LocalAuthGuard } from '../graphql/guards/local-auth.guard';
+import { UserDto } from '../../dto/user.dto';
 import { User } from 'src/users/Entities/user.entity';
 
 @Controller()

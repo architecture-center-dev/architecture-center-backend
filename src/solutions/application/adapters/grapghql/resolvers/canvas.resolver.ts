@@ -1,6 +1,6 @@
 import { Resolver, Query, Args, Mutation } from '@nestjs/graphql';
 import { UseGuards } from '@nestjs/common';
-import { GqlAuthGuard } from 'src/auth/guards/gql.auth.guard';
+import { GqlAuthGuard } from 'src/auth/application/adapters/graphql/guards/gql.auth.guard';
 import { CanvasService } from 'src/solutions/domain/services/canvas.service';
 import { Canvas } from 'src/solutions/domain/entities/canvas.entity';
 import { CreateCanvasDto } from 'src/solutions/application/dto/create-canvas.dto';

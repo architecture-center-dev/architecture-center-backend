@@ -1,6 +1,5 @@
 import { Resolver, Query, Args, Mutation } from '@nestjs/graphql';
 import { UseGuards } from '@nestjs/common';
-import { GqlAuthGuard } from 'src/auth/guards/gql.auth.guard';
 import { SolutionsService } from '../../../../domain/services/solutions.service';
 import { Solution } from '../../../../domain/entities/solution.entity';
 import {ObjectId} from "mongodb"
@@ -8,6 +7,7 @@ import {AWSS3Uploader} from "../../../../infrastructure/persistence/s3/AWSS3Uplo
 import { GraphQLUpload } from 'graphql-tools';
 import { Attachment } from '../../../../domain/entities/attachment.entity';
 import { AttachmentService } from 'src/solutions/domain/services/attachment.service';
+import { GqlAuthGuard } from 'src/auth/application/adapters/graphql/guards/gql.auth.guard';
 
 @Resolver('Solutions')
 export class SolutionResolver {
