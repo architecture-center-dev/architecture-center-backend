@@ -1,6 +1,6 @@
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { UserService } from '../../../users/services/user.service';
+import { UserService } from '../../../users/domain/services/user.service';
 import { UserDto } from '../../application/dto/user.dto';
 
 @Injectable()

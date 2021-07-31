@@ -2,7 +2,7 @@ import { Controller, Request, Post, UseGuards, Get, Body, Param, HttpException, 
 import { AuthService } from '../../../domain/services/auth.service';
 import { LocalAuthGuard } from '../graphql/guards/local-auth.guard';
 import { UserDto } from '../../dto/user.dto';
-import { User } from 'src/users/Entities/user.entity';
+import { User } from 'src/users/domain/Entities/user.entity';
 
 @Controller()
 export class AuthController {

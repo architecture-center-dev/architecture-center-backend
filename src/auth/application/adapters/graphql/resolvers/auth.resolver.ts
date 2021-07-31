@@ -1,6 +1,6 @@
 import { Resolver, Mutation, Args } from '@nestjs/graphql';
 import { AuthService } from 'src/auth/domain/services/auth.service';
-import { OauthTOken } from 'src/users/Entities/oauth-token.type';
+import { OauthTOken } from 'src/users/domain/Entities/oauth-token.type';
 
 
 

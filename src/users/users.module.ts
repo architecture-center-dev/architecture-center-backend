@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from './Entities/user.entity';
-import { UsersController } from './controllers/users.controller';
-import { UserService } from './services/user.service';
-import { UserResolver } from './resolvers/user.resolver';
+import { User } from './domain/Entities/user.entity';
+import { UserService } from './domain/services/user.service';
+import { UserResolver } from './application/adapters/graphql/resolvers/user.resolver';
+import { UsersController } from './application/adapters/rest/users.controller';
 
 @Module({
   imports: [
